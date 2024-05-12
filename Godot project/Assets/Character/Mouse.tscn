@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://detmglwooc27m"]
+[gd_scene load_steps=3 format=3 uid="uid://detmglwooc27m"]
+
+[ext_resource type="Script" path="res://Assets/Character/Scripts/mouse.gd" id="1_x1qnf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dcp4n"]
 
 [node name="Mouse" type="CharacterBody3D"]
+script = ExtResource("1_x1qnf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_dcp4n")

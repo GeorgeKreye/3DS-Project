@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cl7epvbayfflr"]
+[gd_scene load_steps=3 format=3 uid="uid://cl7epvbayfflr"]
 
 [ext_resource type="PackedScene" uid="uid://c4n4jh0f8s8xk" path="res://Assets/Terrains/destroyed_terrain.tscn" id="1_q2u7s"]
+[ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_6ls71"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="destroyed_terrain" parent="." instance=ExtResource("1_q2u7s")]
+
+[node name="Mouse" parent="." instance=ExtResource("2_6ls71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.89849, 1, -1.69992)
