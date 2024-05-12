@@ -3,6 +3,7 @@ extends CharacterBody3D
 @export_category("Movement")
 @export var movement_speed : float = 5.0
 
+@onready var game_gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,20 +12,23 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	# determine 2D movement
+	# apply gravity
+	if not is_on_floor():
+		velocity.y -= game_gravity * delta
+	
+	# determine 2D (lateral) movement
 	var movement = determine_movement(delta)
-
-	# perform 2D movement
 	velocity.x = movement.x
 	velocity.z = movement.z
+	
+	# perform movement
 	move_and_slide()
 
 
-# Determines 2D movement for a frame.
+# Determines 2D/lateral movement for a frame.
 func determine_movement(delta) -> Vector3:
 	# determine movement from inputs
-	var movement_input = Input.get_vector("move_left","move_right","move_up","move_down")
+	var movement_input = Input.get_vector("move_left","move_right","move_forward","move_backward")
 	
 	# create movement vector & return
-	var movement = (transform.basis * movement_input).normalized() * movement_speed
-	return movement
+	return (transform.basis * movement_input).normalized() * movement_speed
