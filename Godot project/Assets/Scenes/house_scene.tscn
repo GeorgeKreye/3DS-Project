@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://bqc1i53fho24l"]
+
+[ext_resource type="PackedScene" uid="uid://bfd0p8ecvyf2p" path="res://Assets/Terrains/Healer-House1D.glb" id="1_1sfii"]
+[ext_resource type="Script" path="res://Assets/Character/Scripts/Player.gd" id="2_mg1j6"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0kgfe"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_jo14v"]
+sky_material = SubResource("ProceduralSkyMaterial_0kgfe")
+
+[sub_resource type="Environment" id="Environment_fvdyp"]
+background_mode = 2
+sky = SubResource("Sky_jo14v")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_b7kb4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ome3k"]
+size = Vector3(1.97156, 0.123474, 1.96802)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jgmff"]
+
+[node name="House_Scene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fvdyp")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.440239, 0.237044, 0, 0.474088, 0.880477, -0.5, 0.762516, -0.410572, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Healer-House1D" parent="." instance=ExtResource("1_1sfii")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -3.92699, 0.0883422, 1.52448)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Healer-House1D"]
+transform = Transform3D(99.9571, 0, 0, 0, 99.9571, 0, 0, 0, 99.9571, 11.22, -0.252406, -4.09648)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Healer-House1D/StaticBody3D"]
+mesh = SubResource("PlaneMesh_b7kb4")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Healer-House1D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00396729, -0.0196228, 0.0137937)
+shape = SubResource("BoxShape3D_ome3k")
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3266, 1.12053, 0)
+script = ExtResource("2_mg1j6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_jgmff")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125122, 0.624846, -0.427869)
+
+[editable path="Healer-House1D"]
