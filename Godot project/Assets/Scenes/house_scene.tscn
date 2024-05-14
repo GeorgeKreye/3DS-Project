@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bqc1i53fho24l"]
 
 [ext_resource type="PackedScene" uid="uid://bfd0p8ecvyf2p" path="res://Assets/Terrains/Healer-House1D.glb" id="1_1sfii"]
-[ext_resource type="Script" path="res://Assets/Character/Scripts/Player.gd" id="2_mg1j6"]
+[ext_resource type="Script" path="res://Assets/Character/Scripts/mouse.gd" id="2_k8svn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0kgfe"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -48,7 +48,7 @@ shape = SubResource("BoxShape3D_ome3k")
 
 [node name="Player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3266, 1.12053, 0)
-script = ExtResource("2_mg1j6")
+script = ExtResource("2_k8svn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 shape = SubResource("CapsuleShape3D_jgmff")
