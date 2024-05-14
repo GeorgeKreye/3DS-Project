@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export_category("Movement")
+@export_category("Lateral movement")
 @export var movement_speed : float = 5.0
 
 @onready var game_gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -31,4 +31,4 @@ func determine_movement(delta) -> Vector3:
 	var movement_input = Input.get_vector("move_left","move_right","move_forward","move_backward")
 	
 	# create movement vector & return
-	return (transform.basis * movement_input).normalized() * movement_speed
+	return (transform.basis * movement_input).normalized() * movement_speed * delta
