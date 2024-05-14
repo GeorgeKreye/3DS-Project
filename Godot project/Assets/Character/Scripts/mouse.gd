@@ -31,4 +31,4 @@ func determine_movement(delta) -> Vector3:
 	var movement_input = Input.get_vector("move_left","move_right","move_forward","move_backward")
 	
 	# create movement vector & return
-	return (transform.basis * movement_input).normalized() * movement_speed * delta
+	return (transform.basis * Vector3(movement_input.x,0,movement_input.y)).normalized() * movement_speed
