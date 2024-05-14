@@ -5,6 +5,8 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dcp4n"]
 
 [node name="Mouse" type="CharacterBody3D"]
+axis_lock_angular_x = true
+axis_lock_angular_z = true
 script = ExtResource("1_x1qnf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
