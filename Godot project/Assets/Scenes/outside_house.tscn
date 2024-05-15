@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://708eragdn11w"]
+
+[ext_resource type="PackedScene" uid="uid://c5qeja5yb2qv4" path="res://Assets/Terrains/Outside_House_Graybox.glb" id="1_dd7qc"]
+[ext_resource type="Script" path="res://Assets/Character/Scripts/mouse.gd" id="2_aia30"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bdacx"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_u34uj"]
+sky_material = SubResource("ProceduralSkyMaterial_bdacx")
+
+[sub_resource type="Environment" id="Environment_ngilf"]
+background_mode = 2
+sky = SubResource("Sky_u34uj")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_53av4"]
+size = Vector3(215.365, 8.05151, 2146.05)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_phbl0"]
+
+[node name="Outside_House" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ngilf")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.440239, 0.237044, 0, 0.474088, 0.880477, -0.5, 0.762516, -0.410572, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Outside_House_Graybox" parent="." instance=ExtResource("1_dd7qc")]
+transform = Transform3D(0.59, 0, 0, 0, 0.59, 0, 0, 0, 0.59, 0, 0, 2)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Outside_House_Graybox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.8971, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Outside_House_Graybox/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.67383, -9.39247, 885.708)
+shape = SubResource("BoxShape3D_53av4")
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3266, 15.7473, 52.021)
+script = ExtResource("2_aia30")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_phbl0")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125122, 0.624846, -0.427869)
