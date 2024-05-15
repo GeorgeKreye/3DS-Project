@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cl7epvbayfflr"]
+[gd_scene load_steps=9 format=3 uid="uid://cl7epvbayfflr"]
 
 [ext_resource type="PackedScene" uid="uid://c4n4jh0f8s8xk" path="res://Assets/Terrains/destroyed_terrain.tscn" id="1_q2u7s"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_6ls71"]
+[ext_resource type="PackedScene" uid="uid://bu2dqh7jcda7u" path="res://Assets/Objects/burnt_tree.tscn" id="3_w6wya"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i7kv8"]
 size = Vector3(10, 3, 1)
@@ -14,6 +15,8 @@ size = Vector3(10, 5, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_lwj8o"]
 size = Vector3(10, 5, 1)
+
+[sub_resource type="Environment" id="Environment_fmu0w"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -40,3 +43,9 @@ shape = SubResource("BoxShape3D_4o6sx")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("BoxMesh_lwj8o")
+
+[node name="burnt_tree" parent="." instance=ExtResource("3_w6wya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 9, 6)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fmu0w")
