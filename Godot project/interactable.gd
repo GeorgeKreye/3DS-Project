@@ -4,13 +4,8 @@ extends Node3D
 signal do_interaction
 signal can_interact
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	# do interaction if in range and button pressed
 	if in_interaction_range() and Input.is_action_just_pressed("interact"):
 		do_interaction.emit()
@@ -24,4 +19,3 @@ func in_interaction_range() -> bool:
 	if within_interaction_range:
 		can_interact.emit()
 	return within_interaction_range
-		
