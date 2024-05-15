@@ -44,8 +44,22 @@ shape = SubResource("BoxShape3D_4o6sx")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("BoxMesh_lwj8o")
 
-[node name="burnt_tree" parent="." instance=ExtResource("3_w6wya")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 9, 6)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fmu0w")
+
+[node name="trees" type="Node3D" parent="."]
+
+[node name="burnt_tree" parent="trees" instance=ExtResource("3_w6wya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 9, 6)
+
+[node name="burnt_tree2" parent="trees" instance=ExtResource("3_w6wya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.6502, 10, 18.0941)
+
+[node name="burnt_tree3" parent="trees" instance=ExtResource("3_w6wya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.4115, 12, 0.228928)
+
+[node name="burnt_tree4" parent="trees" instance=ExtResource("3_w6wya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.82945, 6.14818, 0.183375)
+
+[node name="burnt_tree5" parent="trees" instance=ExtResource("3_w6wya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.6731, 10.2971, 25.6535)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bqc1i53fho24l"]
 
-[ext_resource type="PackedScene" uid="uid://bfd0p8ecvyf2p" path="res://Assets/Terrains/Healer-House1D.glb" id="1_1sfii"]
+[ext_resource type="PackedScene" uid="uid://bfd0p8ecvyf2p" path="res://Assets/Locations/Healer-House1D.glb" id="1_1sfii"]
 [ext_resource type="Script" path="res://Assets/Character/Scripts/mouse.gd" id="2_k8svn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0kgfe"]

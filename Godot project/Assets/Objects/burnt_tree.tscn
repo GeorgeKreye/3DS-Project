@@ -5,7 +5,7 @@ top_radius = 1.0
 bottom_radius = 1.0
 height = 10.0
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_34b4k"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_w1j2i"]
 height = 10.0
 radius = 1.0
 
@@ -15,4 +15,4 @@ radius = 1.0
 mesh = SubResource("CylinderMesh_5e7ym")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CylinderShape3D_34b4k")
+shape = SubResource("CylinderShape3D_w1j2i")
