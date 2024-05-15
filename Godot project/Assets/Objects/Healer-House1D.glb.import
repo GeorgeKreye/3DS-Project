@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bfd0p8ecvyf2p"
-path="res://.godot/imported/Healer-House1D.glb-d0fcb02770a589eeabd82c744c420576.scn"
+path="res://.godot/imported/Healer-House1D.glb-dc4fd362cb7c6928c7f12ace79d4c6f5.scn"
 
 [deps]
 
-source_file="res://Assets/Terrains/Healer-House1D.glb"
-dest_files=["res://.godot/imported/Healer-House1D.glb-d0fcb02770a589eeabd82c744c420576.scn"]
+source_file="res://Assets/Objects/Healer-House1D.glb"
+dest_files=["res://.godot/imported/Healer-House1D.glb-dc4fd362cb7c6928c7f12ace79d4c6f5.scn"]
 
 [params]
 
