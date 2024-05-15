@@ -3,18 +3,18 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://fa06gmq7trt7"
-path="res://.godot/imported/gray map zone 1.glb-554f7e8c220d66f899fbafd01ae789fb.scn"
+uid="uid://b4h6rwl1ydj8"
+path="res://.godot/imported/ruin_greybox.glb-a1a5acbf86cbbfa2b1627ed791e1ebc3.scn"
 
 [deps]
 
-source_file="res://Assets/Terrains/gray map zone 1.glb"
-dest_files=["res://.godot/imported/gray map zone 1.glb-554f7e8c220d66f899fbafd01ae789fb.scn"]
+source_file="res://Assets/Locations/ruin_greybox.glb"
+dest_files=["res://.godot/imported/ruin_greybox.glb-a1a5acbf86cbbfa2b1627ed791e1ebc3.scn"]
 
 [params]
 
-nodes/root_type=""
-nodes/root_name=""
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 meshes/ensure_tangents=true
