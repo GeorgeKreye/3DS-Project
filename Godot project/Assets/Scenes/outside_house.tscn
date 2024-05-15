@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://708eragdn11w"]
 
-[ext_resource type="PackedScene" uid="uid://c5qeja5yb2qv4" path="res://Assets/Terrains/Outside_House_Graybox.glb" id="1_dd7qc"]
+[ext_resource type="PackedScene" uid="uid://c5qeja5yb2qv4" path="res://Assets/Objects/Outside_House_Graybox.glb" id="1_dd7qc"]
 [ext_resource type="Script" path="res://Assets/Character/Scripts/mouse.gd" id="2_aia30"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bdacx"]
