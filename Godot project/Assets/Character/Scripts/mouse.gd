@@ -6,7 +6,7 @@ extends CharacterBody3D
 
 @export_category("Vertical movement")
 ## Vertical velocity to apply on jump
-@export var jump_force: float = 5.0
+@export var jump_force: float = 7.0
 ## Magnitude of effect gravity should have
 @export var grav_modifier: float = 1.0
 
