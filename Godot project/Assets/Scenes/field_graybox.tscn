@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://5awee7saegat" path="res://Assets/Locations/Mouse-Field_Textured.glb" id="2_ewluc"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_v58wp"]
-[ext_resource type="PackedScene" uid="uid://c5u04d6jjvj2u" path="res://Assets/Scenes/area_3d.tscn" id="3_fksif"]
+[ext_resource type="PackedScene" uid="uid://c5u04d6jjvj2u" path="res://Assets/Scenes/Scene1to2.tscn" id="3_fksif"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2a6lo"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -73,6 +73,7 @@ shape = SubResource("ConcavePolygonShape3D_th15b")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.3958, 4.1468, 21.5266)
 
 [node name="Area3D" parent="." instance=ExtResource("3_fksif")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.5415, 0, 23.1552)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.9967, 0, 11.5193)
 
 [editable path="Mouse-Field_Textured"]
+[editable path="Area3D"]

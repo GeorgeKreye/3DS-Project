@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cl7epvbayfflr"]
+[gd_scene load_steps=11 format=3 uid="uid://cl7epvbayfflr"]
 
 [ext_resource type="PackedScene" uid="uid://c4n4jh0f8s8xk" path="res://Assets/Terrains/destroyed_terrain.tscn" id="1_q2u7s"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_6ls71"]
 [ext_resource type="PackedScene" uid="uid://bu2dqh7jcda7u" path="res://Assets/Objects/burnt_tree.tscn" id="3_w6wya"]
 [ext_resource type="PackedScene" uid="uid://b4h6rwl1ydj8" path="res://Assets/Locations/ruin_greybox.glb" id="4_kgvs0"]
+[ext_resource type="PackedScene" uid="uid://busgxwg3xldpf" path="res://Assets/Scenes/Scene2to3.tscn" id="5_1dq4d"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i7kv8"]
 size = Vector3(10, 3, 1)
@@ -67,3 +68,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.6731, 10.2971, 25.6535)
 
 [node name="ruin_greybox" parent="." instance=ExtResource("4_kgvs0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 118.806, 2.62733, -9.13808)
+
+[node name="Scene2to3" parent="." instance=ExtResource("5_1dq4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 3, 6)
+
+[editable path="Scene2to3"]
