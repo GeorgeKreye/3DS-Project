@@ -19,8 +19,15 @@ size = Vector3(10, 5, 1)
 size = Vector3(10, 5, 1)
 
 [sub_resource type="Environment" id="Environment_fmu0w"]
+background_energy_multiplier = 0.45
 
 [node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.113203, -0.45878, 0.881309, 0, 0.887011, 0.461749, -0.993572, 0.0522714, -0.100412, 0, 0, 0)
+light_color = Color(0.388235, 0.113725, 0.0705882, 1)
+light_energy = 1.25
+shadow_enabled = true
 
 [node name="destroyed_terrain" parent="." instance=ExtResource("1_q2u7s")]
 
@@ -70,6 +77,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.6731, 10.2971, 25.6535)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 118.806, 2.62733, -9.13808)
 
 [node name="Scene2to3" parent="." instance=ExtResource("5_1dq4d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 3, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119.965, 2.42012, 4.21622)
+
+[node name="CollisionShape3D" parent="Scene2to3/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.464827, 0)
 
 [editable path="Scene2to3"]

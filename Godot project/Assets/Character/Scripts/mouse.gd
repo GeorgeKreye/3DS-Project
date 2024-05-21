@@ -55,6 +55,7 @@ func _physics_process(delta):
 	
 	# change camera vertical orientation
 	camera.rotate_x(-camera_look_input.y * camera_sensitivity)
+	camera.rotation.x = clamp (camera.rotation.x, -.6, .6)
 	
 	# reset look input
 	camera_look_input = Vector2.ZERO
