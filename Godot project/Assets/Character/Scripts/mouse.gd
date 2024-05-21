@@ -2,13 +2,13 @@ extends CharacterBody3D
 
 @export_category("Lateral movement")
 ## Movement speed on the ground
-@export var movement_speed : float = 5.0
+@export var movement_speed : float = 7.0
 
 @export_category("Vertical movement")
 ## Vertical velocity to apply on jump
-@export var jump_force: float = 7.0
+@export var jump_force: float = 10.0
 ## Magnitude of effect gravity should have
-@export var grav_modifier: float = 1.0
+@export var grav_modifier: float = 2.0
 
 @export_category("Camera")
 ## Mouse sensitivity for camera

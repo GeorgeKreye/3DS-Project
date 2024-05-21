@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://708eragdn11w"]
+[gd_scene load_steps=14 format=3 uid="uid://708eragdn11w"]
 
 [ext_resource type="PackedScene" uid="uid://d4ij16nkupuy1" path="res://Assets/Objects/Grass-Blade.glb" id="3_jp8ro"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="3_kiqb5"]
@@ -33,6 +33,9 @@ size = Vector3(8.86763, 1.03374, 2.2644)
 [sub_resource type="BoxShape3D" id="BoxShape3D_4aaul"]
 size = Vector3(7.20505, 1.05328, 3.28162)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_nq48n"]
+size = Vector3(213.722, 44.3727, 3.19293)
+
 [node name="Outside_House" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -60,80 +63,178 @@ shape = SubResource("ConcavePolygonShape3D_q4nym")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Outside_House_Textured/Cylinder/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_qc6i4")
 
-[node name="Grass-Blade2" parent="." instance=ExtResource("3_jp8ro")]
-transform = Transform3D(2.06863, -0.204543, 2.69053, 0.345718, 3.38237, -0.00866814, -2.67605, 0.278852, 2.07869, 9.25624, 4.15366, 80.4521)
-
-[node name="Cube" parent="Grass-Blade2" index="0"]
-transform = Transform3D(-0.0801277, 0, 0.314696, 0, 11.9614, 0, 0.0241844, 0, 1.04265, 0, -0.0508213, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Grass-Blade2/Cube" index="0"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass-Blade2/Cube/StaticBody3D"]
-transform = Transform3D(1, -1.23978e-05, 4.76837e-07, 0, 1, 4.65661e-10, 7.45058e-09, 1.54972e-06, 1, 2.07544, 0.55023, 0.00305176)
-shape = SubResource("BoxShape3D_rqcsj")
-
-[node name="Grass-Blade3" parent="." instance=ExtResource("3_jp8ro")]
-transform = Transform3D(3.37989, -0.34513, 0.131258, 0.330849, 3.36728, 0.334592, -0.163959, -0.31984, 3.38095, -8.43392, 6.65134, 54.1865)
-
-[node name="Cube" parent="Grass-Blade3" index="0"]
-transform = Transform3D(-0.0801277, 0, 0.314696, 0, 11.9614, 0, 0.0241844, 0, 1.04265, 0, -0.0508213, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Grass-Blade3/Cube" index="0"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass-Blade3/Cube/StaticBody3D"]
-transform = Transform3D(0.999997, 5.24521e-06, -5.72205e-06, -9.60426e-10, 1, 6.51926e-09, -1.71363e-07, 4.76837e-07, 0.999999, 2.25754, 0.556638, -0.0580177)
-shape = SubResource("BoxShape3D_4aaul")
-
-[node name="Grass-Blade4" parent="." instance=ExtResource("3_jp8ro")]
-transform = Transform3D(0.875596, 0.239549, -3.27658, -0.248114, 3.38609, 0.181252, 3.27594, 0.19243, 0.889495, 11.231, 6.65134, 35.7036)
-
-[node name="Cube" parent="Grass-Blade4" index="0"]
-transform = Transform3D(-0.0801277, 0, 0.314696, 0, 11.9614, 0, 0.0241844, 0, 1.04265, 0, -0.0508213, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Grass-Blade4/Cube" index="0"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass-Blade4/Cube/StaticBody3D"]
-transform = Transform3D(0.999997, 5.24521e-06, -5.72205e-06, -9.60426e-10, 1, 6.51926e-09, -1.71363e-07, 4.76837e-07, 0.999999, 2.25754, 0.556638, -0.0580177)
-shape = SubResource("BoxShape3D_4aaul")
-
-[node name="Grass-Blade5" parent="." instance=ExtResource("3_jp8ro")]
-transform = Transform3D(2.08319, 0.933661, -2.51965, -1.34913, 3.12061, 0.0409194, 2.32383, 0.97473, 2.28248, 24.7333, 6.84019, 67.2296)
-
-[node name="Cube" parent="Grass-Blade5" index="0"]
-transform = Transform3D(-0.0801277, 0, 0.314696, 0, 11.9614, 0, 0.0241844, 0, 1.04265, 0, -0.0508213, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Grass-Blade5/Cube" index="0"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass-Blade5/Cube/StaticBody3D"]
-transform = Transform3D(0.999997, 5.24521e-06, -5.72205e-06, -9.60426e-10, 1, 6.51926e-09, -1.71363e-07, 4.76837e-07, 0.999999, 2.25754, 0.556638, -0.0580177)
-shape = SubResource("BoxShape3D_4aaul")
-
-[node name="Grass-Blade6" parent="." instance=ExtResource("3_jp8ro")]
-transform = Transform3D(2.3949, -0.0600402, -2.41265, 0.276046, 3.38346, 0.189816, 2.39755, -0.329585, 2.38812, -3.39237, 4.36128, 86.5851)
-
-[node name="Cube" parent="Grass-Blade6" index="0"]
-transform = Transform3D(-0.0801277, 0, 0.314696, 0, 11.9614, 0, 0.0241844, 0, 1.04265, 0, -0.0508213, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Grass-Blade6/Cube" index="0"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass-Blade6/Cube/StaticBody3D"]
-transform = Transform3D(0.999997, 5.24521e-06, -5.72205e-06, -9.60426e-10, 1, 6.51926e-09, -1.71363e-07, 4.76837e-07, 0.999999, 2.25754, 0.556638, -0.0580177)
-shape = SubResource("BoxShape3D_4aaul")
-
 [node name="Mouse" parent="." instance=ExtResource("3_kiqb5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6712, 8.872, 65.244)
 
-[node name="Grass-Blade_Array2" parent="." instance=ExtResource("4_0jsnb")]
+[node name="GRASS" type="Node3D" parent="."]
+
+[node name="Grass-Blade2" parent="GRASS" instance=ExtResource("3_jp8ro")]
+transform = Transform3D(2.06863, -0.204543, 2.69053, 0.345718, 3.38237, -0.00866814, -2.67605, 0.278852, 2.07869, 9.25624, 4.15366, 80.4521)
+
+[node name="Cube" parent="GRASS/Grass-Blade2" index="0"]
+transform = Transform3D(-0.0801277, 0, 0.314696, 0, 11.9614, 0, 0.0241844, 0, 1.04265, 0, -0.0508213, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GRASS/Grass-Blade2/Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GRASS/Grass-Blade2/Cube/StaticBody3D"]
+transform = Transform3D(1, -1.23978e-05, 4.76837e-07, 0, 1, 4.65661e-10, 7.45058e-09, 1.54972e-06, 1, 2.07544, 0.55023, 0.00305176)
+shape = SubResource("BoxShape3D_rqcsj")
+
+[node name="Grass-Blade3" parent="GRASS" instance=ExtResource("3_jp8ro")]
+transform = Transform3D(3.37989, -0.34513, 0.131258, 0.330849, 3.36728, 0.334592, -0.163959, -0.31984, 3.38095, -8.43392, 6.65134, 54.1865)
+
+[node name="Cube" parent="GRASS/Grass-Blade3" index="0"]
+transform = Transform3D(-0.0801277, 0, 0.314696, 0, 11.9614, 0, 0.0241844, 0, 1.04265, 0, -0.0508213, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GRASS/Grass-Blade3/Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GRASS/Grass-Blade3/Cube/StaticBody3D"]
+transform = Transform3D(0.999997, 5.24521e-06, -5.72205e-06, -9.60426e-10, 1, 6.51926e-09, -1.71363e-07, 4.76837e-07, 0.999999, 2.25754, 0.556638, -0.0580177)
+shape = SubResource("BoxShape3D_4aaul")
+
+[node name="Grass-Blade4" parent="GRASS" instance=ExtResource("3_jp8ro")]
+transform = Transform3D(0.875596, 0.239549, -3.27658, -0.248114, 3.38609, 0.181252, 3.27594, 0.19243, 0.889495, 11.231, 6.65134, 35.7036)
+
+[node name="Cube" parent="GRASS/Grass-Blade4" index="0"]
+transform = Transform3D(-0.0801277, 0, 0.314696, 0, 11.9614, 0, 0.0241844, 0, 1.04265, 0, -0.0508213, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GRASS/Grass-Blade4/Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GRASS/Grass-Blade4/Cube/StaticBody3D"]
+transform = Transform3D(0.999997, 5.24521e-06, -5.72205e-06, -9.60426e-10, 1, 6.51926e-09, -1.71363e-07, 4.76837e-07, 0.999999, 2.25754, 0.556638, -0.0580177)
+shape = SubResource("BoxShape3D_4aaul")
+
+[node name="Grass-Blade5" parent="GRASS" instance=ExtResource("3_jp8ro")]
+transform = Transform3D(2.08319, 0.933661, -2.51965, -1.34913, 3.12061, 0.0409194, 2.32383, 0.97473, 2.28248, 24.7333, 6.84019, 67.2296)
+
+[node name="Cube" parent="GRASS/Grass-Blade5" index="0"]
+transform = Transform3D(-0.0801277, 0, 0.314696, 0, 11.9614, 0, 0.0241844, 0, 1.04265, 0, -0.0508213, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GRASS/Grass-Blade5/Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GRASS/Grass-Blade5/Cube/StaticBody3D"]
+transform = Transform3D(0.999997, 5.24521e-06, -5.72205e-06, -9.60426e-10, 1, 6.51926e-09, -1.71363e-07, 4.76837e-07, 0.999999, 2.25754, 0.556638, -0.0580177)
+shape = SubResource("BoxShape3D_4aaul")
+
+[node name="Grass-Blade6" parent="GRASS" instance=ExtResource("3_jp8ro")]
+transform = Transform3D(2.3949, -0.0600402, -2.41265, 0.276046, 3.38346, 0.189816, 2.39755, -0.329585, 2.38812, -3.39237, 4.36128, 86.5851)
+
+[node name="Cube" parent="GRASS/Grass-Blade6" index="0"]
+transform = Transform3D(-0.0801277, 0, 0.314696, 0, 11.9614, 0, 0.0241844, 0, 1.04265, 0, -0.0508213, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GRASS/Grass-Blade6/Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GRASS/Grass-Blade6/Cube/StaticBody3D"]
+transform = Transform3D(0.999997, 5.24521e-06, -5.72205e-06, -9.60426e-10, 1, 6.51926e-09, -1.71363e-07, 4.76837e-07, 0.999999, 2.25754, 0.556638, -0.0580177)
+shape = SubResource("BoxShape3D_4aaul")
+
+[node name="Grass-Blade_Array2" parent="GRASS" instance=ExtResource("4_0jsnb")]
 transform = Transform3D(-1.48619e-07, 0, 3.4, 0, 3.4, 0, -3.4, 0, -1.48619e-07, 57.5776, 0.530124, 107.514)
 
-[node name="Grass-Blade_Array" parent="." instance=ExtResource("4_0jsnb")]
-transform = Transform3D(3.475, 0, 0, 0, 3.475, 0, 0, 0, 3.475, -59.7233, 2.39943, 61.1887)
+[node name="Grass-Blade_Array4" parent="GRASS" instance=ExtResource("4_0jsnb")]
+transform = Transform3D(-1.48619e-07, 0, 3.4, 0, 3.4, 0, -3.4, 0, -1.48619e-07, 50.2851, 0.530124, 107.514)
+
+[node name="Grass-Blade_Array15" parent="GRASS" instance=ExtResource("4_0jsnb")]
+transform = Transform3D(4.05446e-08, 0, -3.4, 0, 3.4, 0, 3.4, 0, 4.05446e-08, -60.4288, 0.530124, -105.674)
+
+[node name="Grass-Blade_Array16" parent="GRASS" instance=ExtResource("4_0jsnb")]
+transform = Transform3D(4.05446e-08, 0, -3.4, 0, 3.4, 0, 3.4, 0, 4.05446e-08, -67.7213, 0.530124, -105.674)
+
+[node name="Grass-Blade_Array" parent="GRASS" instance=ExtResource("4_0jsnb")]
+transform = Transform3D(3.47453, 0.056948, 0, -0.056948, 3.47453, 0, 0, 0, 3.475, -59.7233, 2.39943, 61.1887)
+
+[node name="Grass-Blade_Array5" parent="GRASS" instance=ExtResource("4_0jsnb")]
+transform = Transform3D(3.46931, 0.198824, 0, -0.198824, 3.46931, 0, 0, 0, 3.475, -59.7233, 2.39943, 68.6402)
+
+[node name="Grass-Blade_Array13" parent="GRASS" instance=ExtResource("4_0jsnb")]
+transform = Transform3D(3.46931, 0.198824, 0, -0.198824, 3.46931, 0, 0, 0, 3.475, -59.7233, 2.39943, -39.2092)
+
+[node name="Grass-Blade_Array14" parent="GRASS" instance=ExtResource("4_0jsnb")]
+transform = Transform3D(3.47134, -0.159333, 0, 0.159333, 3.47134, 0, 0, 0, 3.475, -59.7233, 2.39943, -32.0416)
+
+[node name="Grass-Blade_Array3" parent="GRASS" instance=ExtResource("4_0jsnb")]
+transform = Transform3D(3.45315, -0.389042, 0, 0.389042, 3.45315, 0, 0, 0, 3.475, -59.7233, 2.39943, 132.887)
+
+[node name="Cube" parent="GRASS/Grass-Blade_Array3" index="0"]
+transform = Transform3D(-0.0836979, 0, 0, 0, 11.9614, 0, 0, 0, 1.08911, 0, -0.0508213, 22.9288)
+
+[node name="Grass-Blade_Array6" parent="GRASS" instance=ExtResource("4_0jsnb")]
+transform = Transform3D(3.47491, 0.0243812, 0, -0.0243812, 3.47491, 0, 0, 0, 3.475, -59.7233, 2.39943, 138.901)
+
+[node name="Cube" parent="GRASS/Grass-Blade_Array6" index="0"]
+transform = Transform3D(-0.0836979, 0, 0, 0, 11.9614, 0, 0, 0, 1.08911, 0, -0.0508213, 22.9288)
+
+[node name="Grass-Blade_Array7" parent="GRASS" instance=ExtResource("4_0jsnb")]
+transform = Transform3D(-3.44069, -0.48711, -3.00795e-07, -0.48711, 3.44069, -4.25845e-08, 3.03794e-07, 0, -3.475, 51.5129, 2.39943, -25.2803)
+
+[node name="Grass-Blade_Array11" parent="GRASS" instance=ExtResource("4_0jsnb")]
+transform = Transform3D(-3.43453, 0.528809, -3.00256e-07, 0.528809, 3.43453, 4.62299e-08, 3.03794e-07, 0, -3.475, 51.5129, 2.39943, -54.1968)
+
+[node name="Grass-Blade_Array12" parent="GRASS" instance=ExtResource("4_0jsnb")]
+transform = Transform3D(-3.47293, 0.119821, -3.03614e-07, 0.119821, 3.47293, 1.04751e-08, 3.03794e-07, 0, -3.475, 51.5129, 2.39943, -61.5872)
+
+[node name="Grass-Blade_Array8" parent="GRASS" instance=ExtResource("4_0jsnb")]
+transform = Transform3D(-3.47343, -0.104424, -3.03657e-07, -0.104424, 3.47343, -9.12903e-09, 3.03794e-07, 0, -3.475, 51.5129, 2.39943, -17.8288)
+
+[node name="Grass-Blade_Array9" parent="GRASS" instance=ExtResource("4_0jsnb")]
+transform = Transform3D(-3.46875, 0.20833, -3.03248e-07, 0.20833, 3.46875, 1.82128e-08, 3.03794e-07, 0, -3.475, 51.5129, 2.39943, 46.4176)
+
+[node name="Cube" parent="GRASS/Grass-Blade_Array9" index="0"]
+transform = Transform3D(-0.0836979, 0, 0, 0, 11.9614, 0, 0, 0, 1.08911, 0, -0.0508213, 22.9288)
+
+[node name="Grass-Blade_Array10" parent="GRASS" instance=ExtResource("4_0jsnb")]
+transform = Transform3D(-3.46566, -0.254624, -3.02978e-07, -0.254624, 3.46566, -2.22599e-08, 3.03794e-07, 0, -3.475, 51.5129, 2.39943, 52.4324)
+
+[node name="Cube" parent="GRASS/Grass-Blade_Array10" index="0"]
+transform = Transform3D(-0.0836979, 0, 0, 0, 11.9614, 0, 0, 0, 1.08911, 0, -0.0508213, 22.9288)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 110.745)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.46123, 21.6863, -1.09647)
+shape = SubResource("BoxShape3D_nq48n")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -121.917, 0, -104.532)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.46123, 21.6863, -1.09647)
+shape = SubResource("BoxShape3D_nq48n")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.3703, 0, 46.7228)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.9562, 21.6863, -1.09647)
+shape = SubResource("BoxShape3D_nq48n")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 52.3605, 0, 46.7228)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.9562, 21.6863, -1.09647)
+shape = SubResource("BoxShape3D_nq48n")
 
 [editable path="Outside_House_Textured"]
-[editable path="Grass-Blade2"]
-[editable path="Grass-Blade3"]
-[editable path="Grass-Blade4"]
-[editable path="Grass-Blade5"]
-[editable path="Grass-Blade6"]
-[editable path="Grass-Blade_Array2"]
-[editable path="Grass-Blade_Array"]
+[editable path="GRASS/Grass-Blade2"]
+[editable path="GRASS/Grass-Blade3"]
+[editable path="GRASS/Grass-Blade4"]
+[editable path="GRASS/Grass-Blade5"]
+[editable path="GRASS/Grass-Blade6"]
+[editable path="GRASS/Grass-Blade_Array2"]
+[editable path="GRASS/Grass-Blade_Array4"]
+[editable path="GRASS/Grass-Blade_Array15"]
+[editable path="GRASS/Grass-Blade_Array16"]
+[editable path="GRASS/Grass-Blade_Array"]
+[editable path="GRASS/Grass-Blade_Array5"]
+[editable path="GRASS/Grass-Blade_Array13"]
+[editable path="GRASS/Grass-Blade_Array14"]
+[editable path="GRASS/Grass-Blade_Array3"]
+[editable path="GRASS/Grass-Blade_Array6"]
+[editable path="GRASS/Grass-Blade_Array7"]
+[editable path="GRASS/Grass-Blade_Array11"]
+[editable path="GRASS/Grass-Blade_Array12"]
+[editable path="GRASS/Grass-Blade_Array8"]
+[editable path="GRASS/Grass-Blade_Array9"]
+[editable path="GRASS/Grass-Blade_Array10"]
