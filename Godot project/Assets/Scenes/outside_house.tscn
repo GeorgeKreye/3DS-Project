@@ -61,7 +61,7 @@ shape = SubResource("ConcavePolygonShape3D_q4nym")
 shape = SubResource("ConcavePolygonShape3D_qc6i4")
 
 [node name="Grass-Blade2" parent="." instance=ExtResource("3_jp8ro")]
-transform = Transform3D(1.75225, -0.17326, 2.27904, 0.292844, 2.86506, -0.00734244, -2.26678, 0.236204, 1.76078, 9.25624, 4.15366, 80.4521)
+transform = Transform3D(2.06863, -0.204543, 2.69053, 0.345718, 3.38237, -0.00866814, -2.67605, 0.278852, 2.07869, 9.25624, 4.15366, 80.4521)
 
 [node name="Cube" parent="Grass-Blade2" index="0"]
 transform = Transform3D(-0.0801277, 0, 0.314696, 0, 11.9614, 0, 0.0241844, 0, 1.04265, 0, -0.0508213, 0)
@@ -73,7 +73,7 @@ transform = Transform3D(1, -1.23978e-05, 4.76837e-07, 0, 1, 4.65661e-10, 7.45058
 shape = SubResource("BoxShape3D_rqcsj")
 
 [node name="Grass-Blade3" parent="." instance=ExtResource("3_jp8ro")]
-transform = Transform3D(2.86297, -0.292346, 0.111183, 0.280249, 2.85229, 0.283419, -0.138883, -0.270924, 2.86386, -8.43392, 6.65134, 54.1865)
+transform = Transform3D(3.37989, -0.34513, 0.131258, 0.330849, 3.36728, 0.334592, -0.163959, -0.31984, 3.38095, -8.43392, 6.65134, 54.1865)
 
 [node name="Cube" parent="Grass-Blade3" index="0"]
 transform = Transform3D(-0.0801277, 0, 0.314696, 0, 11.9614, 0, 0.0241844, 0, 1.04265, 0, -0.0508213, 0)
@@ -85,7 +85,7 @@ transform = Transform3D(0.999997, 5.24521e-06, -5.72205e-06, -9.60426e-10, 1, 6.
 shape = SubResource("BoxShape3D_4aaul")
 
 [node name="Grass-Blade4" parent="." instance=ExtResource("3_jp8ro")]
-transform = Transform3D(0.741681, 0.202912, -2.77545, -0.210167, 2.86822, 0.153531, 2.77491, 0.162999, 0.753453, 11.231, 6.65134, 35.7036)
+transform = Transform3D(0.875596, 0.239549, -3.27658, -0.248114, 3.38609, 0.181252, 3.27594, 0.19243, 0.889495, 11.231, 6.65134, 35.7036)
 
 [node name="Cube" parent="Grass-Blade4" index="0"]
 transform = Transform3D(-0.0801277, 0, 0.314696, 0, 11.9614, 0, 0.0241844, 0, 1.04265, 0, -0.0508213, 0)
@@ -97,7 +97,7 @@ transform = Transform3D(0.999997, 5.24521e-06, -5.72205e-06, -9.60426e-10, 1, 6.
 shape = SubResource("BoxShape3D_4aaul")
 
 [node name="Grass-Blade5" parent="." instance=ExtResource("3_jp8ro")]
-transform = Transform3D(1.76458, 0.790867, -2.13429, -1.14279, 2.64334, 0.0346608, 1.96842, 0.825655, 1.9334, 24.7333, 6.84019, 67.2296)
+transform = Transform3D(2.08319, 0.933661, -2.51965, -1.34913, 3.12061, 0.0409194, 2.32383, 0.97473, 2.28248, 24.7333, 6.84019, 67.2296)
 
 [node name="Cube" parent="Grass-Blade5" index="0"]
 transform = Transform3D(-0.0801277, 0, 0.314696, 0, 11.9614, 0, 0.0241844, 0, 1.04265, 0, -0.0508213, 0)
@@ -109,7 +109,7 @@ transform = Transform3D(0.999997, 5.24521e-06, -5.72205e-06, -9.60426e-10, 1, 6.
 shape = SubResource("BoxShape3D_4aaul")
 
 [node name="Grass-Blade6" parent="." instance=ExtResource("3_jp8ro")]
-transform = Transform3D(2.02862, -0.0508573, -2.04365, 0.233827, 2.86599, 0.160785, 2.03087, -0.279178, 2.02288, -3.39237, 4.36128, 86.5851)
+transform = Transform3D(2.3949, -0.0600402, -2.41265, 0.276046, 3.38346, 0.189816, 2.39755, -0.329585, 2.38812, -3.39237, 4.36128, 86.5851)
 
 [node name="Cube" parent="Grass-Blade6" index="0"]
 transform = Transform3D(-0.0801277, 0, 0.314696, 0, 11.9614, 0, 0.0241844, 0, 1.04265, 0, -0.0508213, 0)
@@ -135,3 +135,5 @@ transform = Transform3D(3.475, 0, 0, 0, 3.475, 0, 0, 0, 3.475, -59.7233, 2.39943
 [editable path="Grass-Blade4"]
 [editable path="Grass-Blade5"]
 [editable path="Grass-Blade6"]
+[editable path="Grass-Blade_Array2"]
+[editable path="Grass-Blade_Array"]

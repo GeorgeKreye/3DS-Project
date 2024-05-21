@@ -24,6 +24,7 @@ var camera_look_input : Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	camera.rotation = Vector3(0,0,0) # ensure camera does not flip
 
 # Called every physics update
@@ -50,10 +51,10 @@ func _physics_process(delta):
 		camera_rotation = camera_look_input.x * -1
 	else:
 		camera_rotation = camera_look_input.x
-	rotate_y(camera_rotation * camera_sensitivity)
+	rotate_y(-camera_rotation * camera_sensitivity)
 	
 	# change camera vertical orientation
-	camera.rotate_x(camera_look_input.y * camera_sensitivity)
+	camera.rotate_x(-camera_look_input.y * camera_sensitivity)
 	
 	# reset look input
 	camera_look_input = Vector2.ZERO
