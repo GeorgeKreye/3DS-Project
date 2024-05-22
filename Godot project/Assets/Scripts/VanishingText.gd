@@ -16,6 +16,8 @@ func _ready():
 	# set intial opacity
 	opacity = initial_opacity
 	modulate.a = opacity
+	
+	# intialize delay timer
 	opacity_loss_delay_timer = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
