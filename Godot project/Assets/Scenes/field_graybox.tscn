@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://c0f1oqbblrd0l"]
+[gd_scene load_steps=21 format=3 uid="uid://c0f1oqbblrd0l"]
 
 [ext_resource type="PackedScene" uid="uid://5awee7saegat" path="res://Assets/Locations/Mouse-Field_Textured.glb" id="2_ewluc"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_v58wp"]
 [ext_resource type="PackedScene" uid="uid://c5u04d6jjvj2u" path="res://Assets/Scenes/Scene1to2.tscn" id="3_fksif"]
+[ext_resource type="AudioStream" uid="uid://c28eikwytp0re" path="res://Assets/Audio/mouse talk 2.wav" id="4_3miwy"]
 [ext_resource type="Script" path="res://Assets/Scripts/Rock.gd" id="4_ae6kx"]
-[ext_resource type="AudioStream" uid="uid://dhiod3r61girk" path="res://Assets/Audio/rocks-and-gravel-slide-4-204995.mp3" id="5_3w07l"]
+[ext_resource type="AudioStream" uid="uid://b8x0kekqfjr80" path="res://Assets/Audio/push heavy.wav" id="5_wkq8p"]
 [ext_resource type="PackedScene" uid="uid://1wo3wqmixbx0" path="res://Assets/Objects/Grass-Blade_Array.glb" id="6_j4po7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2a6lo"]
@@ -42,9 +43,8 @@ size = Vector3(2.71, 11.53, 9.385)
 size = Vector3(2.33643, 10.4556, 9.32166)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sbbhi"]
-size = Vector3(1, 1.0022, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_25n11"]
+[sub_resource type="BoxMesh" id="BoxMesh_kcoic"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bk8v7"]
 size = Vector3(0.778381, 44.1277, 136.724)
@@ -120,7 +120,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0732422, 0.549606, -0.0432
 shape = SubResource("BoxShape3D_0q0hl")
 
 [node name="Mouse" parent="." instance=ExtResource("2_v58wp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.3693, 5.30076, 27.6996)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.6071, 2.01899, 55.1474)
 
 [node name="Area3D" parent="." instance=ExtResource("3_fksif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.9967, 0, 11.5193)
@@ -128,26 +128,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.9967, 0, 11.5193)
 [node name="Area3D" parent="Area3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 182.933, 1.17158, -107.722)
 
+[node name="HappyMouse" type="AudioStreamPlayer3D" parent="Area3D/Area3D" index="2"]
+stream = ExtResource("4_3miwy")
+
 [node name="_rock_" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.8637, 3.60276, -93.391)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.3993, 7.08685, 42.389)
 collision_layer = 4
 collision_mask = 3
+mass = 40.0
+inertia = Vector3(50, 50, 50)
 max_contacts_reported = 4
 contact_monitor = true
 script = ExtResource("4_ae6kx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="_rock_"]
-transform = Transform3D(5, -2.98023e-07, 0, 2.98023e-07, 5, 0, 0, 0, 5, 0, 0.010253, 0)
-visible = false
 shape = SubResource("BoxShape3D_sbbhi")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="_rock_"]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
-mesh = SubResource("BoxMesh_25n11")
+mesh = SubResource("BoxMesh_kcoic")
 
 [node name="Rocks" type="AudioStreamPlayer3D" parent="_rock_"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-stream = ExtResource("5_3w07l")
+stream = ExtResource("5_wkq8p")
 unit_size = 2.32
 
 [node name="Grass-Blade_Array" parent="." instance=ExtResource("6_j4po7")]
