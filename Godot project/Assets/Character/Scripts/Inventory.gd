@@ -36,6 +36,9 @@ class InventorySlot:
 			printerr("Error: Item type already set")
 			return
 		self.current_item = Item.new(obj)
+		
+	func get_item_obj() -> Node:
+		return self.current_item.obj
 	
 	
 func _init():
@@ -76,4 +79,16 @@ func remove_item(obj: Node, amount: int = 1):
 		
 	# remove
 	self.inventory[slot].remove_item(amount)
-
+	
+func remove_item_by_slot(slot: int, amount: int = 1) -> Node:
+	# get obj
+	var obj = self.inventory[slot].get_item_obj()
+	if obj == null:
+		# nothing to remove
+		return null
+	
+	# remove
+	self.inventory[slot].remove_item(amount)
+	
+	# return
+	return obj
