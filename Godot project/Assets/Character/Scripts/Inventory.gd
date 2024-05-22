@@ -43,7 +43,8 @@ func _init():
 	for i in inventory_slots:
 		self.inventory.append(InventorySlot.new())
 		
-func add_item(obj: Node, amount: int):
+func add_item(obj: Node, amount: int = 1):
+	# get slot
 	var slot = null
 	for s in len(self.inventory):
 		if self.inventory[s].current_item == obj:
@@ -59,4 +60,20 @@ func add_item(obj: Node, amount: int):
 			# inventory is full
 			return
 	
+	# add
+	self.inventory[slot].add_item(amount)
+	
+func remove_item(obj: Node, amount: int = 1):
+	# get slot
+	var slot = null
+	for s in len(self.inventory):
+		if self.inventory[s].current_item == obj:
+			slot = s
+			break
+	if slot == null:
+		printerr("Error: Tried to remove an item not in player inventory")
+		return
+		
+	# remove
+	self.inventory[slot].remove_item(amount)
 
