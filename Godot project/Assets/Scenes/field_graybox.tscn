@@ -1,8 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://c0f1oqbblrd0l"]
+[gd_scene load_steps=20 format=3 uid="uid://c0f1oqbblrd0l"]
 
 [ext_resource type="PackedScene" uid="uid://5awee7saegat" path="res://Assets/Locations/Mouse-Field_Textured.glb" id="2_ewluc"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_v58wp"]
 [ext_resource type="PackedScene" uid="uid://c5u04d6jjvj2u" path="res://Assets/Scenes/Scene1to2.tscn" id="3_fksif"]
+[ext_resource type="Script" path="res://Assets/Scripts/Rock.gd" id="4_ae6kx"]
+[ext_resource type="AudioStream" uid="uid://dhiod3r61girk" path="res://Assets/Audio/rocks-and-gravel-slide-4-204995.mp3" id="5_3w07l"]
+[ext_resource type="PackedScene" uid="uid://1wo3wqmixbx0" path="res://Assets/Objects/Grass-Blade_Array.glb" id="6_j4po7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2a6lo"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -37,6 +40,14 @@ size = Vector3(2.71, 11.53, 9.385)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0q0hl"]
 size = Vector3(2.33643, 10.4556, 9.32166)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sbbhi"]
+size = Vector3(1, 1.0022, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_25n11"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bk8v7"]
+size = Vector3(0.778381, 44.1277, 136.724)
 
 [node name="Field_Graybox" type="Node3D"]
 
@@ -116,6 +127,43 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.9967, 0, 11.5193)
 
 [node name="Area3D" parent="Area3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 182.933, 1.17158, -107.722)
+
+[node name="_rock_" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.8637, 3.60276, -93.391)
+collision_layer = 4
+collision_mask = 3
+max_contacts_reported = 4
+contact_monitor = true
+script = ExtResource("4_ae6kx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="_rock_"]
+transform = Transform3D(5, -2.98023e-07, 0, 2.98023e-07, 5, 0, 0, 0, 5, 0, 0.010253, 0)
+visible = false
+shape = SubResource("BoxShape3D_sbbhi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="_rock_"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("BoxMesh_25n11")
+
+[node name="Rocks" type="AudioStreamPlayer3D" parent="_rock_"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+stream = ExtResource("5_3w07l")
+unit_size = 2.32
+
+[node name="Grass-Blade_Array" parent="." instance=ExtResource("6_j4po7")]
+transform = Transform3D(3.48795, 0.226962, -0.180736, -0.227265, 3.49261, 0, 0.180354, 0.0117357, 3.49533, -101.245, 0, 59.8258)
+
+[node name="Grass-Blade_Array2" parent="." instance=ExtResource("6_j4po7")]
+transform = Transform3D(3.49499, -0.0487414, -0.180736, 0.0488065, 3.49966, 0, 0.180718, -0.00252031, 3.49533, -100.873, 0, 52.6456)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(0.998666, 0, -0.0516388, 0, 1, 0, 0.0516388, 0, 0.998666, -100.443, 0, 12.699)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08852, 21.5638, -17.3428)
+shape = SubResource("BoxShape3D_bk8v7")
+
+[connection signal="body_entered" from="_rock_" to="_rock_" method="_on_body_entered"]
 
 [editable path="Mouse-Field_Textured"]
 [editable path="Area3D"]
