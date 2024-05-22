@@ -21,7 +21,7 @@ size = Vector3(10, 5, 1)
 [sub_resource type="Environment" id="Environment_fmu0w"]
 background_energy_multiplier = 0.45
 
-[node name="Node3D" type="Node3D"]
+[node name="Root" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.113203, -0.45878, 0.881309, 0, 0.887011, 0.461749, -0.993572, 0.0522714, -0.100412, 0, 0, 0)
@@ -42,7 +42,6 @@ shape = SubResource("BoxShape3D_i7kv8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
 mesh = SubResource("BoxMesh_p4xs1")
-skeleton = NodePath("../../StaticBody3D2")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 3.73038, 4.76837e-07, 1.77465)
