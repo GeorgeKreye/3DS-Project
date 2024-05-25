@@ -1,5 +1,6 @@
 extends Node3D
 
+## The distance at which to cap the range the player can interact in
 @export var interaction_range: float = 0.3
 
 # signals
