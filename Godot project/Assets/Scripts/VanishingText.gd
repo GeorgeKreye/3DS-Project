@@ -2,12 +2,13 @@ extends Label
 
 # Opacity variables
 @export_category("Opacity")
-## The opacity to use at the start of the scene
-@export var initial_opacity : float = 1
-## How fast opacity should be lowered
-@export var opacity_loss_rate: float = 0.5
+
+@export var initial_opacity : float = 1.5
+@export var opacity_loss_rate: float = 0.4
+
 ## When to start fade after scene start (in ms)
 @export var opacity_loss_delay : float = 0
+
 var opacity : float
 var opacity_loss_delay_timer : float
 
@@ -16,8 +17,7 @@ func _ready():
 	# set intial opacity
 	opacity = initial_opacity
 	modulate.a = opacity
-	
-	# initialize delay timer
+
 	opacity_loss_delay_timer = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

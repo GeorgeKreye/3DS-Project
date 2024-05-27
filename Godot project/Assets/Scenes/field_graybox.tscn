@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://2v0iunge0167"]
+[gd_scene load_steps=25 format=3 uid="uid://2v0iunge0167"]
 
 [ext_resource type="PackedScene" uid="uid://5awee7saegat" path="res://Assets/Locations/Mouse-Field_Textured.glb" id="1_0714a"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_jfr6k"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://dhiod3r61girk" path="res://Assets/Audio/rocks-and-gravel-slide-4-204995.mp3" id="5_v1sda"]
 [ext_resource type="PackedScene" uid="uid://1wo3wqmixbx0" path="res://Assets/Objects/Grass-Blade_Array.glb" id="6_opukw"]
 [ext_resource type="PackedScene" uid="uid://dvrcfk14ul10q" path="res://Assets/Locations/Ruin-Lab.glb" id="7_3aw3a"]
+[ext_resource type="Script" path="res://Assets/Scripts/VanishingText.gd" id="8_0qq6m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xwg2s"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -193,6 +194,20 @@ mesh = SubResource("BoxMesh_h6q7t")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0644531, -0.0153198, 0.352692)
 shape = SubResource("BoxShape3D_lrfim")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+offset_right = 1161.0
+offset_bottom = 651.0
+theme_override_font_sizes/font_size = 76
+text = "Cross the River"
+horizontal_alignment = 1
+script = ExtResource("8_0qq6m")
 
 [connection signal="body_entered" from="_rock_" to="_rock_" method="_on_body_entered"]
 
