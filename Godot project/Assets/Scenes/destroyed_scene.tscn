@@ -96,6 +96,6 @@ script = ExtResource("7_kilqr")
 [node name="TextSpawner" type="Node" parent="slab/ReadInteractable"]
 script = ExtResource("8_vi6g8")
 
-[connection signal="do_interaction" from="slab/ReadInteractable/ReadableOrigin" to="slab/ReadInteractable/TextSpawner" method="_on_interaction" flags=18]
+[connection signal="do_interaction" from="slab/ReadInteractable/ReadableOrigin" to="slab/ReadInteractable/TextSpawner" method="_on_interaction"]
 
 [editable path="Scene2to3"]
