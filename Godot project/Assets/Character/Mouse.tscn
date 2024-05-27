@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Assets/Character/Scripts/mouse.gd" id="1_x1qnf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dcp4n"]
+height = 1.86396
 
 [node name="Mouse" type="CharacterBody3D" groups=["Mouse"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.971907, 0)
