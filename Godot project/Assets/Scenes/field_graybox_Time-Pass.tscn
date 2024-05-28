@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b6rg6hq4rhcb7"]
+[gd_scene load_steps=23 format=3 uid="uid://b6rg6hq4rhcb7"]
 
 [ext_resource type="PackedScene" uid="uid://5awee7saegat" path="res://Assets/Locations/Mouse-Field_Textured.glb" id="1_w54fa"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_noogb"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://dhiod3r61girk" path="res://Assets/Audio/rocks-and-gravel-slide-4-204995.mp3" id="5_mxjia"]
 [ext_resource type="PackedScene" uid="uid://1wo3wqmixbx0" path="res://Assets/Objects/Grass-Blade_Array.glb" id="6_ga5p6"]
 [ext_resource type="PackedScene" uid="uid://dvrcfk14ul10q" path="res://Assets/Locations/Ruin-Lab.glb" id="7_2pqbf"]
+[ext_resource type="Script" path="res://Assets/Scripts/VanishingText.gd" id="8_fvs4f"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4nicb"]
 sky_top_color = Color(0.717647, 0.27451, 0.133333, 1)
@@ -127,7 +128,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0732422, 0.549606, -0.0432
 shape = SubResource("BoxShape3D_0q0hl")
 
 [node name="Mouse" parent="." instance=ExtResource("2_noogb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.1951, 3.13331, -94.9825)
+transform = Transform3D(-0.279226, 0, 0.960226, 0, 1, 0, -0.960226, 0, -0.279226, -39.8244, 1.17264, -93.6501)
 
 [node name="Area3D" parent="." instance=ExtResource("3_dv5yg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.9967, 0, 11.5193)
@@ -180,6 +181,21 @@ transform = Transform3D(33.1404, 0, 0, 0, 33.1404, 0, 0, 0, 33.1404, 0, 0.006586
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ruin-Lab/Cube/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_b68s1")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 1177.0
+offset_bottom = 670.0
+theme_override_font_sizes/font_size = 76
+text = "Explore the Lab"
+horizontal_alignment = 1
+script = ExtResource("8_fvs4f")
 
 [connection signal="body_entered" from="_rock_" to="_rock_" method="_on_body_entered"]
 

@@ -202,6 +202,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="Control"]
+layout_mode = 0
 offset_right = 1161.0
 offset_bottom = 651.0
 theme_override_font_sizes/font_size = 76
