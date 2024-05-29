@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://bqc1i53fho24l"]
+[gd_scene load_steps=16 format=3 uid="uid://bqc1i53fho24l"]
 
 [ext_resource type="PackedScene" uid="uid://c703xlw5q0yjh" path="res://Assets/Locations/Healer-House.glb" id="1_huqv8"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_x5b2v"]
 [ext_resource type="PackedScene" uid="uid://oon311psm2a6" path="res://Assets/Scenes/scene4to5.tscn" id="3_6ges1"]
+[ext_resource type="Script" path="res://Assets/Scripts/VanishingText.gd" id="4_aror7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0kgfe"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -98,5 +99,20 @@ transform = Transform3D(-0.0504012, 0, -0.998729, 0, 1, 0, 0.998729, 0, -0.05040
 
 [node name="Scene4to5" parent="." instance=ExtResource("3_6ges1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.0539, 29.0104, 10.8023)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 1159.0
+offset_bottom = 683.0
+theme_override_font_sizes/font_size = 76
+text = "Climb the Stairs"
+horizontal_alignment = 1
+script = ExtResource("4_aror7")
 
 [editable path="Healer-House"]
