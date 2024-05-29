@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://2v0iunge0167"]
+[gd_scene load_steps=36 format=3 uid="uid://2v0iunge0167"]
 
 [ext_resource type="PackedScene" uid="uid://5awee7saegat" path="res://Assets/Locations/Mouse-Field_Textured.glb" id="1_0714a"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_jfr6k"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://bvnswkqtiixi5" path="res://Assets/Audio/ambient nature.mp3" id="9_jqkrj"]
 [ext_resource type="Texture2D" uid="uid://cer486lqw7hto" path="res://Assets/Locations/Ruin-Lab_Metal046B_2K-JPG_NormalGL.jpg" id="10_8fb3g"]
 [ext_resource type="Material" uid="uid://d2epb1ljsjieu" path="res://Assets/Materials/Material.001.tres" id="11_yjmdd"]
+[ext_resource type="Material" uid="uid://64v71646r7j" path="res://Assets/Materials/Material.002.tres" id="12_83e86"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xwg2s"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -290,6 +291,7 @@ transform = Transform3D(33.1404, 0, 0, 0, 33.1404, 0, 0, 0, 33.1404, 0, 0.006586
 mesh = SubResource("ArrayMesh_7tjlq")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("11_yjmdd")
+surface_material_override/1 = ExtResource("12_83e86")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Ruin-Lab/Cube"]
 

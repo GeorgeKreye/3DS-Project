@@ -10,3 +10,4 @@ metallic = 0.192727
 roughness = 0.143636
 normal_enabled = true
 normal_texture = ExtResource("1_86rg6")
+uv1_scale = Vector3(15, 15, 15)
