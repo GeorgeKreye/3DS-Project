@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://2v0iunge0167"]
+[gd_scene load_steps=26 format=3 uid="uid://2v0iunge0167"]
 
 [ext_resource type="PackedScene" uid="uid://5awee7saegat" path="res://Assets/Locations/Mouse-Field_Textured.glb" id="1_0714a"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_jfr6k"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://1wo3wqmixbx0" path="res://Assets/Objects/Grass-Blade_Array.glb" id="6_opukw"]
 [ext_resource type="PackedScene" uid="uid://dvrcfk14ul10q" path="res://Assets/Locations/Ruin-Lab.glb" id="7_3aw3a"]
 [ext_resource type="Script" path="res://Assets/Scripts/VanishingText.gd" id="8_0qq6m"]
+[ext_resource type="AudioStream" uid="uid://bvnswkqtiixi5" path="res://Assets/Audio/ambient nature.mp3" id="9_jqkrj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xwg2s"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -43,10 +44,10 @@ size = Vector3(2.71, 11.53, 9.385)
 [sub_resource type="BoxShape3D" id="BoxShape3D_0q0hl"]
 size = Vector3(2.33643, 10.4556, 9.32166)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_sbbhi"]
-size = Vector3(1, 1.0022, 1)
-
 [sub_resource type="BoxMesh" id="BoxMesh_25n11"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sbbhi"]
+size = Vector3(1, 1.02344, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bk8v7"]
 size = Vector3(0.778381, 44.1277, 136.724)
@@ -130,7 +131,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0732422, 0.549606, -0.0432
 shape = SubResource("BoxShape3D_0q0hl")
 
 [node name="Mouse" parent="." instance=ExtResource("2_jfr6k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.3804, 2.04451, 25.0465)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.197, 4.75118, -76.927)
 
 [node name="Area3D" parent="." instance=ExtResource("3_4powv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.9967, 0, 11.5193)
@@ -142,18 +143,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 182.933, 1.17158, -107.722)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.5706, 3.60276, -94.7908)
 collision_layer = 4
 collision_mask = 3
+axis_lock_linear_y = true
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+mass = 5.0
 max_contacts_reported = 4
 contact_monitor = true
 script = ExtResource("4_8d7i2")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="_rock_"]
-transform = Transform3D(5, -2.98023e-07, 0, 2.98023e-07, 5, 0, 0, 0, 5, 0, 0.010253, 0)
-visible = false
-shape = SubResource("BoxShape3D_sbbhi")
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="_rock_"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.928112, 0, 1.02636)
 mesh = SubResource("BoxMesh_25n11")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="_rock_"]
+transform = Transform3D(5, -2.98023e-07, 0, 2.98023e-07, 5, 0, 0, 0, 5, -0.93111, -0.0413928, 1.01723)
+shape = SubResource("BoxShape3D_sbbhi")
 
 [node name="Rocks" type="AudioStreamPlayer3D" parent="_rock_"]
 stream = ExtResource("5_v1sda")
@@ -209,6 +213,10 @@ theme_override_font_sizes/font_size = 76
 text = "Cross the River"
 horizontal_alignment = 1
 script = ExtResource("8_0qq6m")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_jqkrj")
+autoplay = true
 
 [connection signal="body_entered" from="_rock_" to="_rock_" method="_on_body_entered"]
 
