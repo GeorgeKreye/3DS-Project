@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c532o68t40lla"]
+[gd_scene load_steps=23 format=3 uid="uid://rnirnxnwoonh"]
 
 [ext_resource type="PackedScene" uid="uid://5awee7saegat" path="res://Assets/Locations/Mouse-Field_Textured.glb" id="1_w54fa"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_noogb"]
