@@ -58,7 +58,6 @@ transform = Transform3D(0.59, 0, 0, 0, 0.59, 0, 0, 0, 0.59, 0.264392, 4.60115, 2
 [node name="StaticBody3D" type="StaticBody3D" parent="Outside_House_Textured/Plane" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Outside_House_Textured/Plane/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_jgtlv")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Outside_House_Textured/Cube" index="0"]
@@ -72,7 +71,7 @@ shape = SubResource("ConcavePolygonShape3D_q4nym")
 shape = SubResource("ConcavePolygonShape3D_qc6i4")
 
 [node name="Mouse" parent="." instance=ExtResource("3_kiqb5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6712, 8.872, -51.8739)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1874, 12.0994, 77.3167)
 
 [node name="GRASS" type="Node3D" parent="."]
 
@@ -367,3 +366,4 @@ skeleton = NodePath("../CollisionShape3D")
 [editable path="GRASS/Grass-Blade_Array8"]
 [editable path="GRASS/Grass-Blade_Array9"]
 [editable path="GRASS/Grass-Blade_Array10"]
+[editable path="Scene3to4"]

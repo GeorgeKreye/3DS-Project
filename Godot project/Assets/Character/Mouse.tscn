@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://detmglwooc27m"]
 
 [ext_resource type="Script" path="res://Assets/Character/Scripts/mouse.gd" id="1_x1qnf"]
-[ext_resource type="AudioStream" uid="uid://bc71h0gtufmfg" path="res://Assets/Audio/jump.wav" id="2_tkyjx"]
-[ext_resource type="AudioStream" uid="uid://j6qfmces7jux" path="res://Assets/Audio/mouse screech.wav" id="3_m4q74"]
+[ext_resource type="AudioStream" uid="uid://suru1hylkc7a" path="res://Assets/Audio/jump.wav" id="2_tkyjx"]
+[ext_resource type="AudioStream" uid="uid://yughb6r4q6cr" path="res://Assets/Audio/mouse screech.wav" id="3_m4q74"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dcp4n"]
 height = 1.86396

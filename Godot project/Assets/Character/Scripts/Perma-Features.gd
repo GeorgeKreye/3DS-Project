@@ -4,7 +4,9 @@ extends Node3D
 
 
 var scene2 = preload("res://Assets/Scenes/destroyed_scene.tscn")
-@onready var happyMouse = $Area3D/HappyMouse
+@onready var mouse_happy = $Area3D/MouseHappy
+
+
 
 
 #signal fadeEnd
@@ -33,7 +35,7 @@ var scene2 = preload("res://Assets/Scenes/destroyed_scene.tscn")
 func _on_body_entered(body):
 	if body.is_in_group("Mouse"):
 		
-		happyMouse.play()
+		mouse_happy.play()
 		await(get_tree().create_timer(2).timeout)
 		
 		#set_modulate(lerp(get_modulate(), Color(0,0,0,1), 0.2))

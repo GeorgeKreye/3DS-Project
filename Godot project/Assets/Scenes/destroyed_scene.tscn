@@ -36,7 +36,7 @@ shadow_enabled = true
 [node name="destroyed_terrain" parent="." instance=ExtResource("1_q2u7s")]
 
 [node name="Mouse" parent="." instance=ExtResource("2_6ls71")]
-transform = Transform3D(-0.483817, 0, -0.875169, 0, 1, 0, 0.875169, 0, -0.483817, -1.89849, 1, -1.69992)
+transform = Transform3D(-0.483817, 0, -0.875169, 0, 1, 0, 0.875169, 0, -0.483817, -2.03379, 1.90691, -2.18795)
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="."]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 3.1243, 9.53674e-07, 1.21875)

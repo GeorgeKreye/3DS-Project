@@ -130,7 +130,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0732422, 0.549606, -0.0432
 shape = SubResource("BoxShape3D_0q0hl")
 
 [node name="Mouse" parent="." instance=ExtResource("2_jfr6k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.3804, 2.04451, 25.0465)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.3191, 2.04451, 27.74)
 
 [node name="Area3D" parent="." instance=ExtResource("3_4powv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.9967, 0, 11.5193)
