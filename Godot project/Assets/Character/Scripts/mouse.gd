@@ -16,6 +16,7 @@ extends CharacterBody3D
 ## Whether to invert mouse movement required to look up or down (default is mouse up to look down)
 @export var invert_vertical : bool = false
 var camera_look_input : Vector2
+@onready var jump = $Jump
 
 
 # variables to create on ready
@@ -36,6 +37,7 @@ func _physics_process(delta):
 	# determine whether to jump this frame
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_force
+		jump.play()
 	
 	# determine 2D (lateral) movement
 	var movement = determine_movement()
