@@ -42,7 +42,7 @@ data = PackedVector3Array(-1, -0.1594, -0.8752, -1, -1, -1, -1, 1, -1, -1, -0.15
 size = Vector3(2.71, 11.53, 9.385)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0q0hl"]
-size = Vector3(2.33643, 10.4556, 9.32166)
+size = Vector3(2.93192, 10.4556, 9.32166)
 
 [sub_resource type="BoxMesh" id="BoxMesh_25n11"]
 
@@ -105,7 +105,7 @@ mesh = SubResource("BoxMesh_pqug2")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mouse-Field_Textured/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.171143, 0.549606, -0.0432739)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.292053, 0.549606, -0.0432739)
 shape = SubResource("BoxShape3D_0q0hl")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="Mouse-Field_Textured"]
@@ -116,7 +116,7 @@ mesh = SubResource("BoxMesh_pqug2")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mouse-Field_Textured/StaticBody3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0732422, 0.549606, -0.0432739)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.174042, 0.549606, -0.0432739)
 shape = SubResource("BoxShape3D_0q0hl")
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="Mouse-Field_Textured"]
@@ -127,7 +127,7 @@ mesh = SubResource("BoxMesh_pqug2")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mouse-Field_Textured/StaticBody3D3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0732422, 0.549606, -0.0432739)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149277, 0.549606, -0.0432739)
 shape = SubResource("BoxShape3D_0q0hl")
 
 [node name="Mouse" parent="." instance=ExtResource("2_jfr6k")]
