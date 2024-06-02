@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2ymf8oqraw4u"
+uid="uid://cneqkjc1aqsl2"
 path.s3tc="res://.godot/imported/Healer-Table_Textured_Bark001_2K-JPG_NormalDX.jpg-d8da06ebb790115fbad877164463a378.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
@@ -26,7 +26,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://Assets/Objects/Healer-Table_Textured_Bark001_2K-JPG_NormalDX.jpg"
+roughness/src_normal="res://Assets/Healer-Table_Textured_Bark001_2K-JPG_NormalDX.jpg"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

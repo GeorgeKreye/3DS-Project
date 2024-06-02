@@ -1,6 +1,6 @@
 extends Node3D
 
-var scene3 = preload("res://Assets/Scenes/outside_house.tscn")
+var scene3 = preload("res://Assets/Scenes/outsidehouse.tscn")
 #@onready var chill_mouse = $Area3D/MouseHappy
 
 
