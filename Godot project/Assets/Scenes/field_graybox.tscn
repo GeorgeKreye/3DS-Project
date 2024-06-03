@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dqq4eskwoqxke" path="res://Assets/Objects/Brick Wall.glb" id="16_dse3p"]
 [ext_resource type="PackedScene" uid="uid://cyvbxmoiybfi4" path="res://Assets/Objects/Burnt-Tree.glb" id="17_kxf0t"]
 [ext_resource type="Script" path="res://Assets/Scenes/Water_reset.gd" id="18_pvbc3"]
+[ext_resource type="AudioStream" uid="uid://dhiod3r61girk" path="res://Assets/Audio/rocks-and-gravel-slide-4-204995.mp3" id="19_a7ups"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xwg2s"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -242,7 +243,7 @@ contact_monitor = true
 script = ExtResource("4_8d7i2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="_rock_"]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.928112, 0, 1.02636)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 30.0719, 0, -130.974)
 mesh = SubResource("SphereMesh_uobmj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="_rock_"]
