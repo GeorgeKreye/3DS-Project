@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4n4jh0f8s8xk"]
+[gd_scene load_steps=10 format=3 uid="uid://c4n4jh0f8s8xk"]
 
 [ext_resource type="Terrain3DStorage" uid="uid://dbs1372h55kud" path="res://Assets/Terrains/destroyed_terrain_3d_storage.res" id="1_tsval"]
+[ext_resource type="Texture2D" uid="uid://dpno0ckh1iewp" path="res://Assets/Textures/BurnedGroundB_S.jpg" id="2_6w8wx"]
+[ext_resource type="Texture2D" uid="uid://dia1qvfn5eppo" path="res://Assets/Textures/BurnedGroundB_N.jpg" id="3_5m6mw"]
 
 [sub_resource type="Gradient" id="Gradient_eufhe"]
 offsets = PackedFloat32Array(0.2, 1)
@@ -37,11 +39,15 @@ _shader_parameters = {
 "noise3_scale": null,
 "noise_texture": SubResource("NoiseTexture2D_m3x41")
 }
-show_checkered = true
 
-[sub_resource type="Terrain3DTextureList" id="Terrain3DTextureList_eoo6g"]
+[sub_resource type="Terrain3DTexture" id="Terrain3DTexture_vf475"]
+albedo_texture = ExtResource("2_6w8wx")
+normal_texture = ExtResource("3_5m6mw")
+
+[sub_resource type="Terrain3DTextureList" id="Terrain3DTextureList_pxfe7"]
+textures = Array[Terrain3DTexture]([SubResource("Terrain3DTexture_vf475")])
 
 [node name="destroyed_terrain" type="Terrain3D"]
 storage = ExtResource("1_tsval")
 material = SubResource("Terrain3DMaterial_72jri")
-texture_list = SubResource("Terrain3DTextureList_eoo6g")
+texture_list = SubResource("Terrain3DTextureList_pxfe7")
