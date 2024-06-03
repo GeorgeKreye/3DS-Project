@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="3_kiqb5"]
 [ext_resource type="PackedScene" uid="uid://dhidqxw3jkp8c" path="res://Assets/Locations/Outside_House_Textured.glb" id="3_r3tiw"]
 [ext_resource type="PackedScene" uid="uid://1wo3wqmixbx0" path="res://Assets/Objects/Grass-Blade_Array.glb" id="4_0jsnb"]
-[ext_resource type="PackedScene" uid="uid://cocod186y6puc" path="res://Assets/Scenes/scene3to4.tscn" id="5_1m0hy"]
+[ext_resource type="PackedScene" uid="uid://1gpkxi2n05y" path="res://Assets/Scenes/scene3to4.tscn" id="5_1m0hy"]
 [ext_resource type="Script" path="res://Assets/Scripts/VanishingText.gd" id="6_hnb5u"]
 [ext_resource type="PackedScene" uid="uid://c703xlw5q0yjh" path="res://Assets/Locations/Healer-House.glb" id="7_csdml"]
 

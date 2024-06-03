@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cocod186y6puc"]
+[gd_scene load_steps=4 format=3 uid="uid://1gpkxi2n05y"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Scene3to4.gd" id="1_8impq"]
 [ext_resource type="AudioStream" uid="uid://11vyp33boxmg" path="res://Assets/Audio/mouse talk 2.wav" id="2_oxros"]

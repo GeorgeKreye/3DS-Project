@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://1wo3wqmixbx0" path="res://Assets/Objects/Grass-Blade_Array.glb" id="6_ga5p6"]
 [ext_resource type="PackedScene" uid="uid://dvrcfk14ul10q" path="res://Assets/Locations/Ruin-Lab.glb" id="7_2pqbf"]
 [ext_resource type="PackedScene" uid="uid://3unrpru0ooba" path="res://Assets/Objects/Water.glb" id="9_8c883"]
-[ext_resource type="PackedScene" path="res://Assets/Objects/Tank.glb" id="10_3cigv"]
+[ext_resource type="PackedScene" uid="uid://bi0uwebh22g2s" path="res://Assets/Objects/Tank.glb" id="10_3cigv"]
 [ext_resource type="PackedScene" uid="uid://dqq4eskwoqxke" path="res://Assets/Objects/Brick Wall.glb" id="11_ny61i"]
 [ext_resource type="PackedScene" uid="uid://cyvbxmoiybfi4" path="res://Assets/Objects/Burnt-Tree.glb" id="12_l5h2i"]
 [ext_resource type="Script" path="res://Assets/Scenes/Water_Reset-2.gd" id="13_bk08e"]

@@ -46,7 +46,7 @@ func _physics_process(delta):
 	
 	# perform movement
 	move_and_slide()
-	
+	push(delta)
 	# change y rotation based on camera
 	var camera_rotation : float
 	if invert_vertical: # check for inverted vertical camera movement controls
@@ -76,3 +76,12 @@ func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		camera_look_input = event.relative
 	
+func push(delta):
+	const pushAmount = -36
+	var coll = get_last_slide_collision()
+	if coll:
+		var obcollider = coll.get_collider()
+		var obposition = coll.get_position
+		if obcollider is RigidBody3D and obcollider.is_in_group("Obstacles"):
+			var direction := coll.get_normal()
+			obcollider.apply_central_impulse(direction * pushAmount * delta)
