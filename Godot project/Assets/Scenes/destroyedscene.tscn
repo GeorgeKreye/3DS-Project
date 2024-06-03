@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cl7epvbayfflr"]
+[gd_scene load_steps=15 format=3 uid="uid://dm828cvycmj0v"]
 
 [ext_resource type="PackedScene" uid="uid://c4n4jh0f8s8xk" path="res://Assets/Terrains/destroyed_terrain.tscn" id="1_q2u7s"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_6ls71"]
@@ -107,8 +107,8 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
-offset_right = 1207.0
-offset_bottom = 700.0
+offset_right = 1928.0
+offset_bottom = 1100.0
 theme_override_font_sizes/font_size = 76
 text = "Pass through the Field"
 horizontal_alignment = 1

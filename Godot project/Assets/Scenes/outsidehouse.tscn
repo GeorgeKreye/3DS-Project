@@ -71,7 +71,7 @@ shape = SubResource("ConcavePolygonShape3D_q4nym")
 shape = SubResource("ConcavePolygonShape3D_qc6i4")
 
 [node name="Mouse" parent="." instance=ExtResource("3_kiqb5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1874, 12.0994, 77.3167)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9241, 30.2762, -74.9903)
 
 [node name="GRASS" type="Node3D" parent="."]
 
@@ -234,8 +234,8 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
-offset_right = 1203.0
-offset_bottom = 696.0
+offset_right = 1955.0
+offset_bottom = 1112.0
 theme_override_font_sizes/font_size = 76
 text = "Go to the Stairs"
 horizontal_alignment = 1

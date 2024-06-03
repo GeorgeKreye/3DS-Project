@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://duru0i58fbfrv"]
+[gd_scene load_steps=31 format=3 uid="uid://duru0i58fbfrv"]
 
 [ext_resource type="PackedScene" uid="uid://c703xlw5q0yjh" path="res://Assets/Locations/Healer-House.glb" id="1_huqv8"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_x5b2v"]
@@ -110,6 +110,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8cp23")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_snxw2"]
+size = Vector3(1, 15.9073, 13.8882)
+
 [node name="House_Scene" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -179,8 +182,8 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
-offset_right = 1159.0
-offset_bottom = 683.0
+offset_right = 1972.0
+offset_bottom = 1096.0
 theme_override_font_sizes/font_size = 76
 text = "Climb the Stairs"
 horizontal_alignment = 1
@@ -243,6 +246,13 @@ transform = Transform3D(-32.32, 0, 3.41061e-13, 0, -220.737, 0, -3.41061e-13, 0,
 transform = Transform3D(333.207, 0, -2.91038e-11, 0, 306.663, 0, 9.09495e-12, 0, 584.211, 474.018, -16.7532, 0)
 mesh = SubResource("ArrayMesh_nd38h")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.8833, 0, -23.605)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.45364, 0.0208435)
+shape = SubResource("BoxShape3D_snxw2")
 
 [editable path="Healer-House"]
 [editable path="Healer-Chair_Textured"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bebyk1q7vrox7"]
+[gd_scene load_steps=31 format=3 uid="uid://bebyk1q7vrox7"]
 
 [ext_resource type="PackedScene" uid="uid://5awee7saegat" path="res://Assets/Locations/Mouse-Field_Textured.glb" id="1_w54fa"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_noogb"]
@@ -9,12 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://1wo3wqmixbx0" path="res://Assets/Objects/Grass-Blade_Array.glb" id="6_ga5p6"]
 [ext_resource type="PackedScene" uid="uid://dvrcfk14ul10q" path="res://Assets/Locations/Ruin-Lab.glb" id="7_2pqbf"]
 [ext_resource type="PackedScene" uid="uid://3unrpru0ooba" path="res://Assets/Objects/Water.glb" id="9_8c883"]
-[ext_resource type="PackedScene" path="res://Assets/Objects/Tank.glb" id="10_3cigv"]
+[ext_resource type="PackedScene" uid="uid://cj2ij0xt8ukel" path="res://Assets/Objects/Tank.glb" id="10_3cigv"]
 [ext_resource type="PackedScene" uid="uid://dqq4eskwoqxke" path="res://Assets/Objects/Brick Wall.glb" id="11_ny61i"]
 [ext_resource type="PackedScene" uid="uid://cyvbxmoiybfi4" path="res://Assets/Objects/Burnt-Tree.glb" id="12_l5h2i"]
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_th15b"]
-data = PackedVector3Array(-1, -0.1594, -0.8752, -1, -1, -1, -1, 1, -1, -1, -0.1594, -0.8752, -1, -0.5201, -0.8752, -1, -1, -1, -1, -0.5201, -0.5145, -1, -1, -1, -1, -0.5201, -0.8752, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, -0.1594, -0.5145, -1, -0.1594, -0.8752, -1, -0.5201, -0.5145, -1, -1, 1, -1, -1, -1, -1, -1, 1, -1, -0.1594, -0.5145, -1, 1, -1, -1, -0.5201, -0.5145, -1, -0.1594, -0.5145, -1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -0.5201, -0.8752, 1, 1, -1, 1, -1, -1, 1, -0.5201, -0.8752, 1, -0.1594, -0.8752, 1, 1, -1, 1, -0.1594, -0.5145, 1, 1, -1, 1, -0.1594, -0.8752, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, -1, 1, 1, -0.5201, -0.8752, 1, -1, -1, 1, -1, 1, 1, -0.5201, -0.5145, 1, -0.5201, -0.8752, 1, -0.1594, -0.5145, 1, -1, 1, 1, 1, -1, 1, -0.1594, -0.5145, 1, -0.5201, -0.5145, 1, -1, 1, -0.3422, 0.3068, 1, -1, 1, 1, -0.3426, 0.704, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, 1, 1, 1, 0.0185, 0.31, 1, 0.0181, 0.7072, 1, -0.3422, 0.3068, 1, -1, -1, 1, -1, 1, 1, -1, -1, 1, 0.0185, 0.31, 1, 1, 1, 1, -1, -1, 1, -0.3422, 0.3068, 1, 0.0185, 0.31, 1, 0.0181, 0.7072, 1, -1, 1, 1, 1, 1, 1, 0.0181, 0.7072, 1, -0.3426, 0.704, 1, -1, 1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, -1, -0.1594, -0.8752, 1, -0.5201, -0.8752, -1, -0.5201, -0.8752, -1, -0.1594, -0.8752, 1, -0.1594, -0.8752, 1, -0.5201, -0.8752, -0.004, -0.4602, -0.5145, 1, -0.1594, -0.5145, -0.0043, -0.1594, -0.5145, -1, -0.5201, -0.5145, -0.365, -0.1594, -0.5145, -1, -0.1594, -0.5145, -1, -0.5201, -0.5145, -0.3646, -0.4635, -0.5145, -0.365, -0.1594, -0.5145, -0.004, -0.4602, -0.5145, 1, -0.5201, -0.5145, 1, -0.1594, -0.5145, -1, -0.5201, -0.5145, -0.004, -0.4602, -0.5145, -0.3646, -0.4635, -0.5145, 1, -0.5201, -0.5145, -0.004, -0.4602, -0.5145, -1, -0.5201, -0.5145, -1, -0.5201, -0.8752, -0.3663, -0.5201, -0.626, -1, -0.5201, -0.5145, -1, -0.5201, -0.8752, -0.3668, -0.5201, -0.66, -0.3663, -0.5201, -0.626, -0.0057, -0.5201, -0.6323, -1, -0.5201, -0.5145, -0.3663, -0.5201, -0.626, 1, -0.5201, -0.5145, -1, -0.5201, -0.8752, 1, -0.5201, -0.8752, -1, -0.5201, -0.8752, -0.0062, -0.5201, -0.6654, -0.3668, -0.5201, -0.66, -0.0057, -0.5201, -0.6323, 1, -0.5201, -0.5145, -1, -0.5201, -0.5145, 1, -0.5201, -0.5145, -0.0062, -0.5201, -0.6654, -1, -0.5201, -0.8752, 1, -0.5201, -0.5145, -0.0057, -0.5201, -0.6323, -0.0062, -0.5201, -0.6654, -0.3678, -0.1594, -0.6977, -1, -0.1594, -0.5145, -0.365, -0.1594, -0.5145, 1, -0.1594, -0.8752, -0.0043, -0.1594, -0.5145, 1, -0.1594, -0.5145, 1, -0.1594, -0.8752, -0.0072, -0.1594, -0.704, -0.0043, -0.1594, -0.5145, -0.3678, -0.1594, -0.6977, -1, -0.1594, -0.8752, -1, -0.1594, -0.5145, 1, -0.1594, -0.8752, -0.3678, -0.1594, -0.6977, -0.0072, -0.1594, -0.704, -1, -0.1594, -0.8752, -0.3678, -0.1594, -0.6977, 1, -0.1594, -0.8752, -0.3667, -0.5339, -0.653, -0.0062, -0.5201, -0.6654, -0.0061, -0.5335, -0.6586, -0.3667, -0.5339, -0.653, -0.3668, -0.5201, -0.66, -0.0062, -0.5201, -0.6654, -0.0062, -0.5201, -0.6654, -0.0057, -0.5201, -0.6323, -0.0061, -0.5335, -0.6586, -0.0043, -0.1594, -0.5145, 0.0185, 0.31, 1, -0.004, -0.4602, -0.5145, 0.0185, 0.31, 1, -0.0072, -0.1594, -0.704, 0.0181, 0.7072, 1, 0.0185, 0.31, 1, -0.0043, -0.1594, -0.5145, -0.0072, -0.1594, -0.704, -0.3678, -0.1594, -0.6977, -0.3422, 0.3068, 1, -0.3426, 0.704, 1, -0.3422, 0.3068, 1, -0.365, -0.1594, -0.5145, -0.3646, -0.4635, -0.5145, -0.3422, 0.3068, 1, -0.3678, -0.1594, -0.6977, -0.365, -0.1594, -0.5145, -0.3667, -0.5339, -0.653, -0.3663, -0.5201, -0.626, -0.3668, -0.5201, -0.66, -0.0057, -0.5201, -0.6323, -0.3667, -0.5339, -0.653, -0.0061, -0.5335, -0.6586, -0.0057, -0.5201, -0.6323, -0.3663, -0.5201, -0.626, -0.3667, -0.5339, -0.653, -0.3646, -0.4635, -0.5145, 0.0185, 0.31, 1, -0.3422, 0.3068, 1, -0.3646, -0.4635, -0.5145, -0.004, -0.4602, -0.5145, 0.0185, 0.31, 1, -0.0072, -0.1594, -0.704, -0.3426, 0.704, 1, 0.0181, 0.7072, 1, -0.0072, -0.1594, -0.704, -0.3678, -0.1594, -0.6977, -0.3426, 0.704, 1)
+[ext_resource type="Script" path="res://Assets/Scenes/Water_Reset-2.gd" id="13_bk08e"]
+[ext_resource type="Script" path="res://Assets/Scripts/VanishingText.gd" id="14_vcy02"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4nicb"]
 sky_top_color = Color(0.717647, 0.27451, 0.133333, 1)
@@ -63,12 +62,14 @@ size = Vector3(1.78955, 38.0942, 11.2057)
 [sub_resource type="BoxShape3D" id="BoxShape3D_vdjms"]
 size = Vector3(1.59656, 37.6982, 11.246)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ltep"]
+size = Vector3(158.833, 1.01917, 240.49)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_o03ta"]
+height = 0.697983
+radius = 3.36665
+
 [node name="Field_Graybox" type="Node3D"]
-
-[node name="@StaticBody3D@19567" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="@StaticBody3D@19567"]
-shape = SubResource("ConcavePolygonShape3D_th15b")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_pylqo")
@@ -105,7 +106,7 @@ surface_material_override/0 = ExtResource("2_xm0ry")
 shape = SubResource("ConcavePolygonShape3D_vgydl")
 
 [node name="Mouse" parent="." instance=ExtResource("2_noogb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.1951, 3.13331, -94.9825)
+transform = Transform3D(0.0102449, 0, 0.999948, 0, 1, 0, -0.999948, 0, 0.0102449, -33.2432, 0.658487, -93.2586)
 
 [node name="Area3D" parent="." instance=ExtResource("3_dv5yg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.9967, 0, 11.5193)
@@ -187,7 +188,7 @@ transform = Transform3D(-1.52057e-07, -1.93104e-08, -3.5, -0.227265, 3.49261, -9
 transform = Transform3D(-1.52936e-07, 4.92481e-09, -3.5, 0.0488065, 3.49966, 2.79168e-09, 3.49966, -0.0488065, -1.5299e-07, -35.9172, 0, -101.125)
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -47.3042, 0, -17.717)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -47.3042, 0, -19.3628)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
 transform = Transform3D(1, 0, -2.70006e-13, 0, 1, 0, 2.70006e-13, 0, 1, -79.0583, 21.5638, -73.1982)
@@ -352,7 +353,38 @@ transform = Transform3D(0.618939, 0, -1.89656, 0, 1.995, 0, 1.89656, 0, 0.618939
 [node name="Burnt-Tree6" parent="." instance=ExtResource("12_l5h2i")]
 transform = Transform3D(0.618939, 0, -1.89656, 0, 1.995, 0, 1.89656, 0, 0.618939, 86.8974, -0.151221, 72.4762)
 
+[node name="Water_Reset-2" type="Area3D" parent="."]
+collision_layer = 15
+collision_mask = 3
+script = ExtResource("13_bk08e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Water_Reset-2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.1993, -1.6701, 12.9763)
+shape = SubResource("BoxShape3D_0ltep")
+
+[node name="Water_Character_2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.0784, 0.308035, -93.2718)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Water_Character_2"]
+shape = SubResource("CylinderShape3D_o03ta")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 1984.0
+offset_bottom = 1088.0
+theme_override_font_sizes/font_size = 76
+text = "Explore the Lab"
+horizontal_alignment = 1
+script = ExtResource("14_vcy02")
+
 [connection signal="body_entered" from="_rock_" to="_rock_" method="_on_body_entered"]
+[connection signal="body_entered" from="Water_Reset-2" to="Water_Reset-2" method="_on_body_entered"]
 
 [editable path="Mouse-Field_Textured"]
 [editable path="Area3D"]

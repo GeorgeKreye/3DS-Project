@@ -3,7 +3,7 @@ extends Node3D
 #@onready var fade = $Control/AnimationPlayer
 
 
-var scene2 = preload("res://Assets/Scenes/destroyed_scene.tscn")
+var scene2 = preload("res://Assets/Scenes/destroyedscene.tscn")
 @onready var mouse_happy = $Area3D/MouseHappy
 
 
