@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bffju32k8tqb2"
+uid="uid://cm4msgnldp32j"
 path.s3tc="res://.godot/imported/Healer-Table_Textured_Wood036_2K-JPG_NormalDX.jpg-9ce06f2b2c1edc7d644e45091ffcc3ef.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
@@ -26,7 +26,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://Assets/Objects/Healer-Table_Textured_Wood036_2K-JPG_NormalDX.jpg"
+roughness/src_normal="res://Assets/Healer-Table_Textured_Wood036_2K-JPG_NormalDX.jpg"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
