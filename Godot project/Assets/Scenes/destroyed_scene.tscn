@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c4n4jh0f8s8xk" path="res://Assets/Terrains/destroyed_terrain.tscn" id="1_q2u7s"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_6ls71"]
 [ext_resource type="PackedScene" uid="uid://bu2dqh7jcda7u" path="res://Assets/Objects/burnt_tree.tscn" id="3_w6wya"]
-[ext_resource type="PackedScene" uid="uid://b4h6rwl1ydj8" path="res://Assets/Locations/ruin_greybox.glb" id="4_kgvs0"]
+[ext_resource type="PackedScene" uid="uid://v2ru4hfa5kmm" path="res://Assets/Objects/ruin.glb" id="4_r8j52"]
 [ext_resource type="PackedScene" uid="uid://busgxwg3xldpf" path="res://Assets/Scenes/Scene2to3.tscn" id="5_1dq4d"]
 [ext_resource type="PackedScene" uid="uid://dqnilxp3aeams" path="res://Assets/Objects/slab.glb" id="6_6scxx"]
 [ext_resource type="Script" path="res://Assets/Scripts/interactable.gd" id="7_kilqr"]
@@ -76,7 +76,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.82945, 6.14818, 0.183375)
 [node name="burnt_tree5" parent="trees" instance=ExtResource("3_w6wya")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.6731, 10.2971, 25.6535)
 
-[node name="ruin_greybox" parent="." instance=ExtResource("4_kgvs0")]
+[node name="ruin" parent="." instance=ExtResource("4_r8j52")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 118.806, 2.62733, -9.13808)
 
 [node name="Scene2to3" parent="." instance=ExtResource("5_1dq4d")]
