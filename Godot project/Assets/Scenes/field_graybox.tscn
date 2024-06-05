@@ -1,8 +1,13 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=52 format=3 uid="uid://2v0iunge0167"]
+=======
+[gd_scene load_steps=46 format=3 uid="uid://2v0iunge0167"]
+>>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://5awee7saegat" path="res://Assets/Locations/Mouse-Field_Textured.glb" id="1_0714a"]
+[ext_resource type="Script" path="res://Assets/Scenes/text_area.gd" id="1_vnfuo"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_jfr6k"]
-[ext_resource type="PackedScene" uid="uid://c5u04d6jjvj2u" path="res://Assets/Scenes/Scene1to2.tscn" id="3_4powv"]
+[ext_resource type="PackedScene" path="res://Assets/Scenes/Scene1to2.tscn" id="3_4powv"]
 [ext_resource type="Script" path="res://Assets/Scripts/Rock.gd" id="4_8d7i2"]
 [ext_resource type="Texture2D" uid="uid://bvrjf4c6w38ls" path="res://Assets/Objects/Rock_Rock029_2K-JPG_Color.jpg" id="5_2qq38"]
 [ext_resource type="Texture2D" uid="uid://67d323wa1jau" path="res://Assets/Objects/Rock_Rock029_2K-JPG_NormalGL.jpg" id="6_jc3mt"]
@@ -228,6 +233,9 @@ radius = 5.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_l4qbv"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_1b1s0"]
+size = Vector3(1.23244, 1, 0.9305)
+
 [node name="Field_Graybox" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -275,7 +283,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.292053, 0.549606, -0.04327
 shape = SubResource("BoxShape3D_0q0hl")
 
 [node name="Mouse" parent="." instance=ExtResource("2_jfr6k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.197, 2.75118, -90.927)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.197, 2.56845, 25.2706)
 collision_mask = 15
 
 [node name="Area3D" parent="." instance=ExtResource("3_4powv")]
@@ -501,7 +509,61 @@ stream = ExtResource("19_a7ups")
 transform = Transform3D(0.6, 0, 0, 0, 1, 0, 0, 0, 0.6, -55, 10.3, -18)
 
 [node name="Cracker2" parent="." instance=ExtResource("19_frjyv")]
-transform = Transform3D(0.6, 0, 0, 0, 1, 0, 0, 0, 0.6, 98, 0.2, -93)
+transform = Transform3D(0.6, 0, 0, 0, 1, 0, 0, 0, 0.6, 96.855, 0.2, -93)
+
+[node name="text_area_cracker" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72.7661, 1.22465, 13.32)
+
+[node name="Area3D" type="Area3D" parent="text_area_cracker"]
+collision_mask = 15
+script = ExtResource("1_vnfuo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="text_area_cracker/Area3D"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -2.54205, 10.1117, -33.4739)
+shape = SubResource("BoxShape3D_1b1s0")
+
+[node name="Control" type="Control" parent="text_area_cracker"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="text_area_cracker/Control"]
+visible = false
+layout_mode = 0
+offset_right = 1921.0
+offset_bottom = 975.0
+theme_override_font_sizes/font_size = 60
+text = "Mouse smells something tasty.."
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="text_area_cracker2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.9162, 0.018388, -87.8133)
+
+[node name="Area3D" type="Area3D" parent="text_area_cracker2"]
+collision_mask = 15
+script = ExtResource("1_vnfuo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="text_area_cracker2/Area3D"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 1.68048, 0, -0.0280609)
+shape = SubResource("BoxShape3D_1b1s0")
+
+[node name="Control" type="Control" parent="text_area_cracker2"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="text_area_cracker2/Control"]
+visible = false
+layout_mode = 0
+offset_right = 1921.0
+offset_bottom = 975.0
+theme_override_font_sizes/font_size = 60
+text = "Mouse smells something tasty.."
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="Control2" type="Control" parent="."]
 layout_mode = 3
@@ -522,6 +584,12 @@ script = ExtResource("22_eghpr")
 
 [connection signal="body_entered" from="Rock/rock" to="Rock/rock" method="_on_body_entered"]
 [connection signal="body_entered" from="Water_reset" to="Water_reset" method="_on_body_entered"]
+<<<<<<< Updated upstream
+=======
+[connection signal="body_entered" from="RigidBody3D" to="RigidBody3D" method="_on_body_entered"]
+[connection signal="body_entered" from="text_area_cracker/Area3D" to="text_area_cracker/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="text_area_cracker2/Area3D" to="text_area_cracker2/Area3D" method="_on_body_entered"]
+>>>>>>> Stashed changes
 
 [editable path="Mouse-Field_Textured"]
 [editable path="Area3D"]
