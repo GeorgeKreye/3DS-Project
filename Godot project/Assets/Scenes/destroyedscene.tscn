@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dm828cvycmj0v"]
+[gd_scene load_steps=16 format=3 uid="uid://dm828cvycmj0v"]
 
 [ext_resource type="PackedScene" uid="uid://c4n4jh0f8s8xk" path="res://Assets/Terrains/destroyed_terrain.tscn" id="1_q2u7s"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_6ls71"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Assets/Scripts/interactable.gd" id="7_kilqr"]
 [ext_resource type="Script" path="res://Assets/Scripts/read_interactable.gd" id="8_vi6g8"]
 [ext_resource type="Script" path="res://Assets/Scripts/VanishingText.gd" id="9_wcyt8"]
+[ext_resource type="PackedScene" uid="uid://behtasbp5od1t" path="res://Assets/Objects/Cracker.glb" id="10_sqvfe"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i7kv8"]
 size = Vector3(10, 3, 1)
@@ -113,6 +114,9 @@ theme_override_font_sizes/font_size = 76
 text = "Pass through the Field"
 horizontal_alignment = 1
 script = ExtResource("9_wcyt8")
+
+[node name="Cracker" parent="." instance=ExtResource("10_sqvfe")]
+transform = Transform3D(-0.261484, -0.00824055, 0.0672403, 0.0435811, 0.740659, 0.176095, -0.0512533, 0.671831, -0.193311, 110.5, 4.1, -3.1)
 
 [connection signal="do_interaction" from="slab/ReadInteractable/ReadableOrigin" to="slab/ReadInteractable/TextSpawner" method="_on_interaction"]
 
