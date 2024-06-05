@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://ck5ksvq46twj0"]
+[gd_scene load_steps=20 format=3 uid="uid://cl3kec6nola6n"]
 
 [ext_resource type="PackedScene" uid="uid://d4ij16nkupuy1" path="res://Assets/Objects/Grass-Blade.glb" id="3_jp8ro"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="3_kiqb5"]
