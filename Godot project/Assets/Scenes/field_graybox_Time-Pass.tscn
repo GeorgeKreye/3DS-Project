@@ -1,9 +1,9 @@
-[gd_scene load_steps=30 format=3 uid="uid://byms1w3smwm2m"]
+[gd_scene load_steps=30 format=3 uid="uid://dxt2ft1my3boq"]
 
 [ext_resource type="PackedScene" uid="uid://5awee7saegat" path="res://Assets/Locations/Mouse-Field_Textured.glb" id="1_w54fa"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_noogb"]
 [ext_resource type="Material" uid="uid://d2epb1ljsjieu" path="res://Assets/Materials/Material.001.tres" id="2_xm0ry"]
-[ext_resource type="PackedScene" uid="uid://c5u04d6jjvj2u" path="res://Assets/Scenes/Scene1to2.tscn" id="3_dv5yg"]
+[ext_resource type="PackedScene" path="res://Assets/Scenes/Scene1to2.tscn" id="3_dv5yg"]
 [ext_resource type="PackedScene" uid="uid://1wo3wqmixbx0" path="res://Assets/Objects/Grass-Blade_Array.glb" id="6_ga5p6"]
 [ext_resource type="PackedScene" uid="uid://dvrcfk14ul10q" path="res://Assets/Locations/Ruin-Lab.glb" id="7_2pqbf"]
 [ext_resource type="PackedScene" uid="uid://3unrpru0ooba" path="res://Assets/Objects/Water.glb" id="9_8c883"]

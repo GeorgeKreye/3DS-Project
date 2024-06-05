@@ -1,15 +1,16 @@
-[gd_scene load_steps=16 format=3 uid="uid://dm828cvycmj0v"]
+[gd_scene load_steps=18 format=3 uid="uid://dcjjks4t8qm4e"]
 
 [ext_resource type="PackedScene" uid="uid://c4n4jh0f8s8xk" path="res://Assets/Terrains/destroyed_terrain.tscn" id="1_q2u7s"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_6ls71"]
 [ext_resource type="PackedScene" uid="uid://bu2dqh7jcda7u" path="res://Assets/Objects/burnt_tree.tscn" id="3_w6wya"]
 [ext_resource type="PackedScene" uid="uid://v2ru4hfa5kmm" path="res://Assets/Objects/ruin.glb" id="4_r8j52"]
-[ext_resource type="PackedScene" uid="uid://busgxwg3xldpf" path="res://Assets/Scenes/Scene2to3.tscn" id="5_1dq4d"]
+[ext_resource type="PackedScene" path="res://Assets/Scenes/Scene2to3.tscn" id="5_1dq4d"]
 [ext_resource type="PackedScene" uid="uid://dqnilxp3aeams" path="res://Assets/Objects/slab.glb" id="6_6scxx"]
 [ext_resource type="Script" path="res://Assets/Scripts/interactable.gd" id="7_kilqr"]
 [ext_resource type="Script" path="res://Assets/Scripts/read_interactable.gd" id="8_vi6g8"]
 [ext_resource type="Script" path="res://Assets/Scripts/VanishingText.gd" id="9_wcyt8"]
 [ext_resource type="PackedScene" uid="uid://behtasbp5od1t" path="res://Assets/Objects/Cracker.glb" id="10_sqvfe"]
+[ext_resource type="Script" path="res://Assets/Scenes/text_area.gd" id="11_tor3s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i7kv8"]
 size = Vector3(10, 3, 1)
@@ -25,6 +26,9 @@ size = Vector3(10, 5, 1)
 
 [sub_resource type="Environment" id="Environment_fmu0w"]
 background_energy_multiplier = 0.45
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1b1s0"]
+size = Vector3(1.00838, 1, 1.81282)
 
 [node name="Root" type="Node3D"]
 
@@ -118,6 +122,35 @@ script = ExtResource("9_wcyt8")
 [node name="Cracker" parent="." instance=ExtResource("10_sqvfe")]
 transform = Transform3D(-0.261484, -0.00824055, 0.0672403, 0.0435811, 0.740659, 0.176095, -0.0512533, 0.671831, -0.193311, 110.5, 4.1, -3.1)
 
+[node name="text_area_cracker" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 106.571, 0, -0.289925)
+
+[node name="Area3D" type="Area3D" parent="text_area_cracker"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4726, 0)
+collision_mask = 15
+script = ExtResource("11_tor3s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="text_area_cracker/Area3D"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -4.09447, 0, -4.63943)
+shape = SubResource("BoxShape3D_1b1s0")
+
+[node name="Control" type="Control" parent="text_area_cracker"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="text_area_cracker/Control"]
+visible = false
+layout_mode = 0
+offset_right = 1921.0
+offset_bottom = 975.0
+theme_override_font_sizes/font_size = 60
+text = "Mouse smells something tasty.."
+horizontal_alignment = 1
+vertical_alignment = 2
+
 [connection signal="do_interaction" from="slab/ReadInteractable/ReadableOrigin" to="slab/ReadInteractable/TextSpawner" method="_on_interaction"]
+[connection signal="body_entered" from="text_area_cracker/Area3D" to="text_area_cracker/Area3D" method="_on_body_entered"]
 
 [editable path="Scene2to3"]
