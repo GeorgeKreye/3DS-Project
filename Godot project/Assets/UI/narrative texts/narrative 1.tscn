@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://5o222bp5bvvj"]
+
+[node name="narrative 1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 590.0
+offset_top = 977.0
+offset_right = 1335.0
+offset_bottom = 1058.0
+text = "Mouse smells something tasty.."
