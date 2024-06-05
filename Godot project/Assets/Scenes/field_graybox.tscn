@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=52 format=3 uid="uid://2v0iunge0167"]
-=======
-[gd_scene load_steps=46 format=3 uid="uid://2v0iunge0167"]
->>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://5awee7saegat" path="res://Assets/Locations/Mouse-Field_Textured.glb" id="1_0714a"]
 [ext_resource type="Script" path="res://Assets/Scenes/text_area.gd" id="1_vnfuo"]
@@ -584,12 +580,9 @@ script = ExtResource("22_eghpr")
 
 [connection signal="body_entered" from="Rock/rock" to="Rock/rock" method="_on_body_entered"]
 [connection signal="body_entered" from="Water_reset" to="Water_reset" method="_on_body_entered"]
-<<<<<<< Updated upstream
-=======
 [connection signal="body_entered" from="RigidBody3D" to="RigidBody3D" method="_on_body_entered"]
 [connection signal="body_entered" from="text_area_cracker/Area3D" to="text_area_cracker/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="text_area_cracker2/Area3D" to="text_area_cracker2/Area3D" method="_on_body_entered"]
->>>>>>> Stashed changes
 
 [editable path="Mouse-Field_Textured"]
 [editable path="Area3D"]
