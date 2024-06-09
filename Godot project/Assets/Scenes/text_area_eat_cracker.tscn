@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://7j6pvm6kcxbu"]
+[gd_scene load_steps=3 format=3 uid="uid://blrrot8mjf3ag"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/text_area.gd" id="1_dq6ya"]
+[ext_resource type="Script" path="res://Assets/Scripts/text_area.gd" id="1_b2hab"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1b1s0"]
 size = Vector3(1.00838, 1, 1.81282)
@@ -9,7 +9,7 @@ size = Vector3(1.00838, 1, 1.81282)
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_mask = 15
-script = ExtResource("1_dq6ya")
+script = ExtResource("1_b2hab")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 0)

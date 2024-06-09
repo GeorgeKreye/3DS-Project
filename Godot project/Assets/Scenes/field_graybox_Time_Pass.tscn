@@ -1,14 +1,15 @@
-[gd_scene load_steps=30 format=3 uid="uid://dxt2ft1my3boq"]
+[gd_scene load_steps=31 format=3 uid="uid://b4bjh5ab4sj2o"]
 
 [ext_resource type="PackedScene" uid="uid://5awee7saegat" path="res://Assets/Locations/Mouse-Field_Textured.glb" id="1_w54fa"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_noogb"]
 [ext_resource type="Material" uid="uid://d2epb1ljsjieu" path="res://Assets/Materials/Material.001.tres" id="2_xm0ry"]
-[ext_resource type="PackedScene" path="res://Assets/Scenes/Scene1to2.tscn" id="3_dv5yg"]
+[ext_resource type="PackedScene" uid="uid://c5u04d6jjvj2u" path="res://Assets/Scenes/Scene1to2.tscn" id="3_dv5yg"]
 [ext_resource type="PackedScene" uid="uid://1wo3wqmixbx0" path="res://Assets/Objects/Grass-Blade_Array.glb" id="6_ga5p6"]
 [ext_resource type="PackedScene" uid="uid://dvrcfk14ul10q" path="res://Assets/Locations/Ruin-Lab.glb" id="7_2pqbf"]
 [ext_resource type="PackedScene" uid="uid://3unrpru0ooba" path="res://Assets/Objects/Water.glb" id="9_8c883"]
 [ext_resource type="PackedScene" uid="uid://bi0uwebh22g2s" path="res://Assets/Objects/Tank.glb" id="10_3cigv"]
 [ext_resource type="PackedScene" uid="uid://dqq4eskwoqxke" path="res://Assets/Objects/Brick Wall.glb" id="11_ny61i"]
+[ext_resource type="FontFile" uid="uid://b6iq5bfskyfek" path="res://Assets/Fonts/endor/ENDOR___.ttf" id="12_l2i5i"]
 [ext_resource type="PackedScene" uid="uid://cyvbxmoiybfi4" path="res://Assets/Objects/Burnt-Tree.glb" id="12_l5h2i"]
 [ext_resource type="PackedScene" uid="uid://wl14tyh7p7i4" path="res://Assets/Objects/Rock.glb" id="13_1p3tf"]
 [ext_resource type="Script" path="res://Assets/Scenes/Water_Reset-2.gd" id="13_bk08e"]
@@ -356,7 +357,8 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_right = 1984.0
 offset_bottom = 1088.0
-theme_override_font_sizes/font_size = 76
+theme_override_fonts/font = ExtResource("12_l2i5i")
+theme_override_font_sizes/font_size = 126
 text = "Explore the Lab"
 horizontal_alignment = 1
 script = ExtResource("14_vcy02")
