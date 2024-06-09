@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://clfbweccvd5y2"]
+[gd_scene load_steps=47 format=3 uid="uid://bwlupjbpfu3ue"]
 
 [ext_resource type="PackedScene" uid="uid://c703xlw5q0yjh" path="res://Assets/Locations/Healer-House.glb" id="1_huqv8"]
 [ext_resource type="Material" uid="uid://0jtjmhrnjm8s" path="res://Assets/Materials/Material.tres" id="2_f0f7l"]
