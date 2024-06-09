@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://busgxwg3xldpf" path="res://Assets/Scenes/Scene2to3.tscn" id="5_1dq4d"]
 [ext_resource type="PackedScene" uid="uid://dqnilxp3aeams" path="res://Assets/Objects/slab.glb" id="6_6scxx"]
 [ext_resource type="PackedScene" uid="uid://behtasbp5od1t" path="res://Assets/Objects/Cracker.glb" id="8_ucoy8"]
-[ext_resource type="Script" path="res://Assets/Scenes/text_area.gd" id="9_wbtvv"]
+[ext_resource type="Script" path="res://Assets/Scripts/text_area.gd" id="9_wbtvv"]
 [ext_resource type="Script" path="res://Assets/Scripts/VanishingText.gd" id="9_wcyt8"]
 [ext_resource type="PackedScene" uid="uid://bxlh18b3yi7m7" path="res://Assets/Objects/stair_step.tscn" id="10_q3e4d"]
 [ext_resource type="PackedScene" uid="uid://b5wngvjuhmg7e" path="res://Assets/Objects/pillar.tscn" id="11_hpytt"]
@@ -139,7 +139,7 @@ transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 3.73, 0, 1.775)
 
 [node name="pillar2" parent="." instance=ExtResource("11_hpytt")]
-transform = Transform3D(-0.345495, 0.396727, -0.850436, 0, 0.906241, 0.422761, 0.938421, 0.146062, -0.313102, 70.9218, 5.04238, 0.458)
+transform = Transform3D(-0.345495, 0.396727, -0.850436, 0, 0.906241, 0.422761, 0.938421, 0.146062, -0.313102, 70.9218, 4.94648, 0.458)
 
 [node name="pillar" parent="." instance=ExtResource("11_hpytt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.411, 12.7675, 0.229)
