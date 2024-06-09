@@ -18,7 +18,7 @@
 [ext_resource type="FontFile" uid="uid://b6iq5bfskyfek" path="res://Assets/Fonts/endor/ENDOR___.ttf" id="15_8nxpt"]
 [ext_resource type="PackedScene" uid="uid://dqq4eskwoqxke" path="res://Assets/Objects/Brick Wall.glb" id="16_dse3p"]
 [ext_resource type="PackedScene" uid="uid://cyvbxmoiybfi4" path="res://Assets/Objects/Burnt-Tree.glb" id="17_kxf0t"]
-[ext_resource type="Script" path="res://Assets/Scenes/Water_reset.gd" id="18_pvbc3"]
+[ext_resource type="Script" path="res://Assets/Scripts/Water_reset.gd" id="18_pvbc3"]
 [ext_resource type="PackedScene" uid="uid://behtasbp5od1t" path="res://Assets/Objects/Cracker.glb" id="19_frjyv"]
 [ext_resource type="Script" path="res://Assets/Scripts/Text_Level-Load.gd" id="22_eghpr"]
 [ext_resource type="Script" path="res://Assets/Scripts/text_area.gd" id="24_krgjx"]
