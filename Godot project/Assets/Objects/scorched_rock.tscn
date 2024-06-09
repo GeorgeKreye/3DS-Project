@@ -54,6 +54,7 @@ points = PackedVector3Array(0.887526, -0.123077, -0.130254, 0.862694, -0.239032,
 [node name="scorched_rock" type="RigidBody3D" groups=["Obstacles"]]
 collision_layer = 8
 collision_mask = 7
+mass = 10.0
 
 [node name="rock" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_x5i0c")
@@ -61,5 +62,3 @@ skeleton = NodePath("")
 
 [node name="collider" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_ctjji")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
