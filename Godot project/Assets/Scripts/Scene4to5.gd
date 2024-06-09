@@ -1,6 +1,6 @@
 extends Node3D
 
-var scene5 = preload("res://Assets/Scenes/field_graybox_Time_Pass.tscn")
+var scene5 = preload("res://Assets/Scenes/field_graybox_Time-Pass.tscn")
 
 var count = 0
 
