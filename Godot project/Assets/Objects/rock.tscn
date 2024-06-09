@@ -54,6 +54,7 @@ points = PackedVector3Array(-0.0132729, 0.409677, -0.658534, 0.500089, 0.059702,
 collision_layer = 8
 collision_mask = 7
 mass = 30.0
+inertia = Vector3(8, 8, 8)
 
 [node name="rock" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1.964, -2.43088, -0.0372138, 2.38544, -1.9176, -0.632688, -0.469267, 0.425989, -3.06042, 0, 1.05004, 0)
