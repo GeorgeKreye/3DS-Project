@@ -7,7 +7,7 @@ extends Area3D
 func _on_body_entered(body):
 	if body.is_in_group("Mouse"):
 		label.visible = true
-		await get_tree().create_timer(2.5).timeout
+		await get_tree().create_timer(5).timeout
 		label.visible = false
 		queue_free()
 

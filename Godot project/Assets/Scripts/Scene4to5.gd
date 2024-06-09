@@ -1,6 +1,7 @@
 extends Node3D
 
-var scene5 = preload("res://Assets/Scenes/field_graybox_Time-Pass.tscn")
+var scene5 = preload("res://Assets/Scenes/field_graybox_Time_Pass.tscn")
+
 
 var count = 0
 
@@ -22,6 +23,6 @@ func _on_body_entered(body):
 		#fader()
 		#await fadeEnd
 		#get_tree().change_scene_to_file("res://Assets/Scenes/destroyed_scene.tscn")
+		await get_tree().create_timer(3).timeout
 		get_tree().change_scene_to_packed(scene5)
-		count += 1
-		print(count)
+		

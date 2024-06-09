@@ -1,12 +1,9 @@
-[gd_scene load_steps=45 format=3 uid="uid://clfbweccvd5y2"]
-
+[gd_scene load_steps=47 format=3 uid="uid://clfbweccvd5y2"]
 
 [ext_resource type="PackedScene" uid="uid://c703xlw5q0yjh" path="res://Assets/Locations/Healer-House.glb" id="1_huqv8"]
 [ext_resource type="Material" uid="uid://0jtjmhrnjm8s" path="res://Assets/Materials/Material.tres" id="2_f0f7l"]
 [ext_resource type="PackedScene" uid="uid://detmglwooc27m" path="res://Assets/Character/Mouse.tscn" id="2_x5b2v"]
-
 [ext_resource type="Script" path="res://Assets/Scripts/Scene4to5.gd" id="3_7ngqe"]
-
 [ext_resource type="Script" path="res://Assets/Scripts/VanishingText.gd" id="4_aror7"]
 [ext_resource type="FontFile" uid="uid://b6iq5bfskyfek" path="res://Assets/Fonts/endor/ENDOR___.ttf" id="4_npkdo"]
 [ext_resource type="PackedScene" uid="uid://bc3t1vm12wcq2" path="res://Assets/Objects/Healer-Table_Textured.glb" id="5_qpqvg"]
@@ -17,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://damu47wutt1np" path="res://Assets/Objects/BookShelf.glb" id="10_vdwd0"]
 [ext_resource type="Script" path="res://Assets/Scripts/text_area.gd" id="12_8sspq"]
 [ext_resource type="PackedScene" uid="uid://behtasbp5od1t" path="res://Assets/Objects/Cracker.glb" id="13_tarhh"]
+[ext_resource type="AudioStream" uid="uid://ye3eokowm1j3" path="res://Assets/Audio/Room Tone Medium Room Sound FX.mp3" id="15_g7vmv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_df11b"]
 sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
@@ -106,9 +104,10 @@ uv1_offset = Vector3(0, -1.6, 0)
 [sub_resource type="ArrayMesh" id="ArrayMesh_8cp23"]
 _surfaces = [{
 "aabb": AABB(0, 0, 0, 0, 0, 0),
-"format": 0,
+"format": 34359738368,
 "name": "Material",
 "primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 0,
 "vertex_data": PackedByteArray()
 }]
@@ -118,10 +117,11 @@ blend_shape_mode = 0
 resource_name = "Outside_House_Textured_Plane"
 _surfaces = [{
 "aabb": AABB(0, 0, 0, 0, 0, 0),
-"format": 0,
+"format": 34359738368,
 "material": SubResource("StandardMaterial3D_p6n6d"),
 "name": "Material",
 "primitive": 5,
+"uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 0,
 "vertex_data": PackedByteArray()
 }]
@@ -136,6 +136,9 @@ data = PackedVector3Array(-0.8234, 1.9992, -1, -1, 1.9992, 1, -1, 1.9992, -1, -0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1b1s0"]
 size = Vector3(1.14624, 1, 1.04494)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_x3ll5"]
+radius = 7.97829
 
 [node name="House_Scene" type="Node3D"]
 
@@ -411,7 +414,36 @@ offset_right = 1921.0
 offset_bottom = 975.0
 theme_override_fonts/font = ExtResource("4_npkdo")
 theme_override_font_sizes/font_size = 60
-text = "Mouse smells something tasty.."
+text = "The mouse smells something tasty.."
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="text_area_cracker2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8958, 28.8214, 7.79356)
+
+[node name="Area3D" type="Area3D" parent="text_area_cracker2"]
+collision_mask = 15
+script = ExtResource("12_8sspq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="text_area_cracker2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.04306, 0, 3.02829)
+shape = SubResource("CylinderShape3D_x3ll5")
+
+[node name="Control" type="Control" parent="text_area_cracker2"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="text_area_cracker2/Control"]
+visible = false
+layout_mode = 0
+offset_right = 1921.0
+offset_bottom = 975.0
+theme_override_colors/font_color = Color(0.431373, 0.858824, 0.282353, 1)
+theme_override_fonts/font = ExtResource("4_npkdo")
+theme_override_font_sizes/font_size = 60
+text = "Hey there little guy, you’ve got quite the appetite. Eat as many as you’d like."
 horizontal_alignment = 1
 vertical_alignment = 2
 
@@ -433,8 +465,14 @@ transform = Transform3D(0.42, 0, 0, 0, 0.42, 0, 0, 0, 0.42, 18.341, 29.1939, 10.
 [node name="Cracker5" parent="." instance=ExtResource("13_tarhh")]
 transform = Transform3D(0.419952, -0.00633514, -0.000261755, 0.00633932, 0.419853, 0.00910898, 0.000124267, -0.00911189, 0.419901, 20.0164, 29.2185, 7.65822)
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_g7vmv")
+volume_db = 11.243
+autoplay = true
+
 [connection signal="body_entered" from="Scene4to5/Area3D" to="Scene4to5/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="text_area_cracker/Area3D" to="text_area_cracker/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="text_area_cracker2/Area3D" to="text_area_cracker2/Area3D" method="_on_body_entered"]
 
 [editable path="Healer-House"]
 [editable path="Healer-Chair_Textured"]
