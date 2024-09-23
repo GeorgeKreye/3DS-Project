@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://0jtjmhrnjm8s"]
+
+[ext_resource type="Texture2D" uid="uid://beoi6aq8fmxer" path="res://Assets/Locations/Healer-House_Wood036_2K-JPG_Color.jpg" id="1_qwqje"]
+[ext_resource type="Texture2D" uid="uid://bcawaomvtqjkp" path="res://Assets/Locations/Healer-House_Wood036_2K-JPG_NormalGL.jpg" id="2_2chi6"]
+
+[resource]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_qwqje")
+roughness = 0.968182
+normal_enabled = true
+normal_scale = 0.5
+normal_texture = ExtResource("2_2chi6")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3ugh7s4gmuoc"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/interactable.gd" id="1_2licd"]
+[ext_resource type="Script" path="res://Assets/Scripts/read_interactable.gd" id="2_6qgdu"]
+
+[node name="ReadInteractable" type="Node"]
+
+[node name="ReadableOrigin" type="Marker3D" parent="."]
+script = ExtResource("1_2licd")
+
+[node name="TextSpawner" type="Node" parent="."]
+script = ExtResource("2_6qgdu")
+
+[connection signal="do_interaction" from="ReadableOrigin" to="TextSpawner" method="_on_interaction"]

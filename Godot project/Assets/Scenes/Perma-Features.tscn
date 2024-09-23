@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://davsj4een22sp"]
+
+[ext_resource type="Script" path="res://Assets/Character/Scripts/Perma-Features.gd" id="1_un24s"]
+
+[node name="Perma-Features" type="Node3D"]
+script = ExtResource("1_un24s")

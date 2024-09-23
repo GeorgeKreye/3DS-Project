@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://n2q3xylb5oii"]
+
+[ext_resource type="Script" path="res://Assets/Objects/ResetZone.gd" id="1_if13c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ti0xc"]
+
+[node name="ResetZone" type="Area3D"]
+script = ExtResource("1_if13c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_ti0xc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

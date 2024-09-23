@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=3 uid="uid://c5u04d6jjvj2u"]
+
+[ext_resource type="Script" path="res://Assets/Character/Scripts/Perma-Features.gd" id="1_ljts1"]
+[ext_resource type="AudioStream" uid="uid://11vyp33boxmg" path="res://Assets/Audio/mouse talk 2.wav" id="2_hbg87"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5qeri"]
+height = 0.483483
+radius = 3.98089
+
+[sub_resource type="Animation" id="Animation_bmp3p"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fh07g"]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wxprw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s2inn"]
+_data = {
+"FadeIn": SubResource("Animation_bmp3p"),
+"FadeOut": SubResource("Animation_fh07g"),
+"RESET": SubResource("Animation_wxprw")
+}
+
+[node name="Area3D" type="Node3D"]
+script = ExtResource("1_ljts1")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.669646, 1.17158, 1.70736)
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_ljts1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.07026, 0)
+shape = SubResource("CylinderShape3D_5qeri")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, -0.00678932, 0.999977, 0, -0.999977, -0.00678932, 0, 4.28668, 0)
+light_energy = 87.36
+light_indirect_energy = 16.0
+spot_range = 7.36114
+
+[node name="MouseHappy" type="AudioStreamPlayer3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.669646, -1.17158, -1.70736)
+stream = ExtResource("2_hbg87")
+
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_right = 1337.0
+offset_bottom = 717.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
+libraries = {
+"": SubResource("AnimationLibrary_s2inn")
+}
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="Control/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

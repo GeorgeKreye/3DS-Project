@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://detmglwooc27m"]
+
+[ext_resource type="Script" path="res://Assets/Character/Scripts/mouse.gd" id="1_x1qnf"]
+[ext_resource type="AudioStream" uid="uid://suru1hylkc7a" path="res://Assets/Audio/jump.wav" id="2_tkyjx"]
+[ext_resource type="AudioStream" uid="uid://yughb6r4q6cr" path="res://Assets/Audio/mouse screech.wav" id="3_m4q74"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dcp4n"]
+height = 1.86396
+
+[node name="Mouse" type="CharacterBody3D" groups=["Mouse"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.971907, 0)
+collision_layer = 2
+collision_mask = 7
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+script = ExtResource("1_x1qnf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_dcp4n")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Jump" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_tkyjx")
+
+[node name="Screech" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_m4q74")

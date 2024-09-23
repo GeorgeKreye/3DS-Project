@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://cek0jc7evf8no"]
+
+[ext_resource type="FontFile" uid="uid://b6iq5bfskyfek" path="res://Assets/Fonts/endor/ENDOR___.ttf" id="1_ayge2"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1929.0
+offset_bottom = 1091.0
+
+[node name="Panel" type="Panel" parent="Control"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 1939.0
+offset_bottom = 1106.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 1941.0
+offset_bottom = 1110.0
+theme_override_fonts/font = ExtResource("1_ayge2")
+theme_override_font_sizes/font_size = 126
+text = "THE END"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 3)

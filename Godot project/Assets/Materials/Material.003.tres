@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c2vie5ge0kmh0"]
+
+[ext_resource type="Texture2D" uid="uid://cna2t4p26jdak" path="res://Assets/Locations/Ruin-Lab_Metal046B_2K-JPG_Color.jpg" id="1_4jksk"]
+[ext_resource type="Texture2D" uid="uid://cer486lqw7hto" path="res://Assets/Locations/Ruin-Lab_Metal046B_2K-JPG_NormalGL.jpg" id="2_dr4ve"]
+
+[resource]
+resource_name = "Material.003"
+cull_mode = 2
+albedo_texture = ExtResource("1_4jksk")
+roughness = 0.367273
+normal_enabled = true
+normal_texture = ExtResource("2_dr4ve")
